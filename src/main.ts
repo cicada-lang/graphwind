@@ -1,4 +1,4 @@
-import { FlowFieldEffect } from "./FlowFieldEffect"
+import { FlowFieldEffect } from "./FlowFieldEffect.js"
 
 window.onload = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -9,7 +9,4 @@ window.onload = () => {
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
   const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height)
-
-  ctx.fillStyle = "red"
-  ctx.fillRect(30, 30, 50, 50)
 }
