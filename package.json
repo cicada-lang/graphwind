@@ -1,0 +1,24 @@
+{
+  "name": "@cicada-lang/inet-canvas",
+  "version": "0.0.1",
+  "repository": "github:cicada-lang/inet-canvas",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test:js": "test-runner test node 'lib/**/*.test.js'",
+    "test": "npm run test:js",
+    "format": "prettier src docs --write"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "@xieyuheng/test-runner": "^0.2.9",
+    "prettier": "^3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {},
+  "license": "GPL-3.0-or-later"
+}
