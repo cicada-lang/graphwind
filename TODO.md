@@ -1,5 +1,3 @@
-rename project to graphwind for general canvas drawing of graphs
-
 # flow-field-effect
 
 refactor flow-field-effect
