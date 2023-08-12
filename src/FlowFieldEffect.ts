@@ -1,8 +1,7 @@
 export class FlowFieldEffect {
   who = "FlowFieldEffect"
 
-  x = 0
-  y = 0
+  angle: number = 0
 
   constructor(
     public ctx: CanvasRenderingContext2D,
@@ -22,10 +21,14 @@ export class FlowFieldEffect {
   }
 
   animate(): void {
-    this.draw(this.x, this.y)
+    this.angle += 0.1
 
-    this.x += 2
-    this.y += 0.5
+    this.ctx.clearRect(0, 0, this.width, this.height)
+
+    this.draw(
+      this.width / 2 + Math.sin(this.angle) * 100,
+      this.height / 2 + Math.cos(this.angle) * 100,
+    )
 
     requestAnimationFrame(this.animate.bind(this))
   }
