@@ -4,8 +4,8 @@ window.onload = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
-  canvas.width = window.innerWidth - 1
-  canvas.height = window.innerHeight - 1
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
 
   const mouse = {
     x: 0,
