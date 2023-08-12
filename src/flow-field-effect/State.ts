@@ -20,4 +20,6 @@ export type State = {
   radius: number
   radiusVelocity: number
   radiusLimit: number
+
+  zoom: number
 }

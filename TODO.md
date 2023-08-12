@@ -1,7 +1,5 @@
 # flow-field-effect
 
-`createState` 
-
 demo-flow-field-effect.html
 
 # learn

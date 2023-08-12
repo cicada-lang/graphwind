@@ -1,4 +1,5 @@
-import { FlowFieldEffect } from "./FlowFieldEffect.js"
+import { animate } from "./flow-field-effect/animate.js"
+import { createState } from "./flow-field-effect/createState.js"
 
 window.onload = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -12,8 +13,13 @@ window.onload = () => {
     y: 0,
   }
 
-  let flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height, mouse)
-  flowField.animate()
+  let state = createState(ctx, {
+    width: canvas.width,
+    height: canvas.height,
+    mouse,
+  })
+
+  animate(ctx, state)
 
   window.addEventListener("mousemove", (event) => {
     mouse.x = event.x
@@ -24,7 +30,12 @@ window.onload = () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height, mouse)
-    flowField.animate()
+    state = createState(ctx, {
+      width: canvas.width,
+      height: canvas.height,
+      mouse,
+    })
+
+    animate(ctx, state)
   })
 }
