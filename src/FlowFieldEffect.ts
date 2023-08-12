@@ -7,10 +7,13 @@ export class FlowFieldEffect {
   interval = 1000 / 60
   timer = 0
 
-  cellSize = 10
+  cellSize = 13
   gradient: CanvasGradient
   radius = 0
   radiusVelocity = 0.03
+  radiusLimit = 25
+
+  zoom = 0.01
 
   constructor(
     public ctx: CanvasRenderingContext2D,
@@ -56,9 +59,14 @@ export class FlowFieldEffect {
   }
 
   drawLine(angle: number, x: number, y: number): void {
+    const dx = this.mouse.x - x
+    const dy = this.mouse.y - y
+    const distance = Math.sqrt(dx * dx + dy * dy)
+    const length = distance * 0.12
+
     this.ctx.beginPath()
     this.ctx.moveTo(x, y)
-    this.ctx.lineTo(x + Math.cos(angle) * 30, y + Math.sin(angle) * 30)
+    this.ctx.lineTo(x + Math.cos(angle) * length, y + Math.sin(angle) * length)
     this.ctx.stroke()
   }
 
@@ -69,11 +77,16 @@ export class FlowFieldEffect {
 
     if (this.timer > this.interval) {
       this.ctx.clearRect(0, 0, this.width, this.height)
+
       this.radius += this.radiusVelocity
+      if (this.radius > this.radiusLimit || this.radius < -this.radiusLimit) {
+        this.radiusVelocity *= -1
+      }
 
       for (let x = this.cellSize; x < this.width; x += this.cellSize) {
         for (let y = this.cellSize; y < this.height; y += this.cellSize) {
-          const angle = (Math.cos(x * 0.01) + Math.sin(y * 0.01)) * this.radius
+          const angle =
+            (Math.cos(x * this.zoom) + Math.sin(y * this.zoom)) * this.radius
           this.drawLine(angle, x, y)
         }
       }
