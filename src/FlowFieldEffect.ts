@@ -1,7 +1,13 @@
 export class FlowFieldEffect {
   who = "FlowFieldEffect"
 
-  angle: number = 0
+  // Faster FPS will be slow to 60 FPS.
+  // Slower FPS will be run as fast as possible.
+  lastTime = 0
+  interval = 1000 / 60
+  timer = 0
+
+  cellSize = 15
 
   constructor(
     public ctx: CanvasRenderingContext2D,
@@ -16,24 +22,35 @@ export class FlowFieldEffect {
     console.log(`[${this.who}] I am created.`)
   }
 
-  draw(x: number, y: number): void {
+  drawLineToMouse(x: number, y: number): void {
     this.ctx.beginPath()
     this.ctx.moveTo(x, y)
     this.ctx.lineTo(this.mouse.x, this.mouse.y)
     this.ctx.stroke()
   }
 
-  animate(): void {
-    this.angle += 0.1
+  drawLine(x: number, y: number): void {
+    this.drawLineToMouse(x, y)
+  }
 
-    // this.ctx.clearRect(0, 0, this.width, this.height)
+  animate(currentTime?: number): void {
+    currentTime = currentTime || 0
+    const deltaTime = currentTime - this.lastTime
+    this.lastTime = currentTime
 
-    this.draw(this.width / 2, this.height / 2)
+    if (this.timer > this.interval) {
+      this.ctx.clearRect(0, 0, this.width, this.height)
 
-    /* this.draw(
-      this.width / 2 + Math.sin(this.angle) * 100,
-      this.height / 2 + Math.cos(this.angle) * 100,
-    ) */
+      for (let x = this.cellSize; x < this.width; x += this.cellSize) {
+        for (let y = this.cellSize; y < this.height; y += this.cellSize) {
+          this.drawLine(x, y)
+        }
+      }
+
+      this.timer = 0
+    } else {
+      this.timer += deltaTime
+    }
 
     requestAnimationFrame(this.animate.bind(this))
   }
