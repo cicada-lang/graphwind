@@ -7,7 +7,8 @@ export class FlowFieldEffect {
   interval = 1000 / 60
   timer = 0
 
-  cellSize = 15
+  cellSize = 10
+  gradient: CanvasGradient
 
   constructor(
     public ctx: CanvasRenderingContext2D,
@@ -16,10 +17,33 @@ export class FlowFieldEffect {
     public mouse: { x: number; y: number },
   ) {
     ctx.strokeStyle = "black"
-    ctx.lineWidth = 3
+    ctx.lineWidth = 0.5
+
     mouse.x = width / 2
     mouse.y = height / 2
+
+    this.gradient = this.createGradient()
+    this.ctx.strokeStyle = this.gradient
+
     console.log(`[${this.who}] I am created.`)
+  }
+
+  createGradient(): CanvasGradient {
+    const gradient = this.ctx.createLinearGradient(
+      0,
+      0,
+      this.width,
+      this.height,
+    )
+
+    gradient.addColorStop(0.1, "#ff5c33")
+    gradient.addColorStop(0.2, "#ff66b3")
+    gradient.addColorStop(0.4, "#ccccff")
+    gradient.addColorStop(0.6, "#b3ffff")
+    gradient.addColorStop(0.8, "#80ff80")
+    gradient.addColorStop(0.9, "#ffff33")
+
+    return gradient
   }
 
   drawLineToMouse(x: number, y: number): void {
@@ -29,8 +53,11 @@ export class FlowFieldEffect {
     this.ctx.stroke()
   }
 
-  drawLine(x: number, y: number): void {
-    this.drawLineToMouse(x, y)
+  drawLine(angle: number, x: number, y: number): void {
+    this.ctx.beginPath()
+    this.ctx.moveTo(x, y)
+    this.ctx.lineTo(x + Math.cos(angle) * 30, y + Math.sin(angle) * 30)
+    this.ctx.stroke()
   }
 
   animate(currentTime?: number): void {
@@ -43,7 +70,8 @@ export class FlowFieldEffect {
 
       for (let x = this.cellSize; x < this.width; x += this.cellSize) {
         for (let y = this.cellSize; y < this.height; y += this.cellSize) {
-          this.drawLine(x, y)
+          const angle = (Math.cos(x * 0.01) + Math.sin(y * 0.01)) * 6
+          this.drawLine(angle, x, y)
         }
       }
 

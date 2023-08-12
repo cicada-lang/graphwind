@@ -12,19 +12,19 @@ window.onload = () => {
     y: 0,
   }
 
+  let flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height, mouse)
+  flowField.animate()
+
   window.addEventListener("mousemove", (event) => {
     mouse.x = event.x
     mouse.y = event.y
   })
 
-  let flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height, mouse)
-  flowField.animate()
-
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    flowField.width = canvas.width
-    flowField.height = canvas.height
+    flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height, mouse)
+    flowField.animate()
   })
 }
