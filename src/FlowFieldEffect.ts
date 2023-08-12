@@ -9,6 +9,8 @@ export class FlowFieldEffect {
 
   cellSize = 10
   gradient: CanvasGradient
+  radius = 0
+  radiusVelocity = 0.03
 
   constructor(
     public ctx: CanvasRenderingContext2D,
@@ -67,10 +69,11 @@ export class FlowFieldEffect {
 
     if (this.timer > this.interval) {
       this.ctx.clearRect(0, 0, this.width, this.height)
+      this.radius += this.radiusVelocity
 
       for (let x = this.cellSize; x < this.width; x += this.cellSize) {
         for (let y = this.cellSize; y < this.height; y += this.cellSize) {
-          const angle = (Math.cos(x * 0.01) + Math.sin(y * 0.01)) * 6
+          const angle = (Math.cos(x * 0.01) + Math.sin(y * 0.01)) * this.radius
           this.drawLine(angle, x, y)
         }
       }
