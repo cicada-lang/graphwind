@@ -28,8 +28,6 @@ export function createState(
 
     cellSize: 13,
 
-    gradient,
-
     radius: 0,
     radiusVelocity: 0.03,
     radiusLimit: 25,

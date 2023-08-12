@@ -14,7 +14,6 @@ export type State = {
   timer: number
 
   cellSize: number
-  gradient: CanvasGradient
 
   // About the curve of the field.
   radius: number
