@@ -1,6 +1,6 @@
-# iNet Canvas
+# Graphwind
 
-A library for drawing interaction nets on canvas.
+A library for drawing graphs on canvas.
 
 ## Usage
 
@@ -9,7 +9,7 @@ A library for drawing interaction nets on canvas.
 Install this library by the following command:
 
 ```
-npm -g i @cicada-lang/inet-canvas
+npm -g i @cicada-lang/graphwind
 ```
 
 ## Development
