@@ -53,13 +53,6 @@ export class FlowFieldEffect {
     return gradient
   }
 
-  drawLineToMouse(x: number, y: number): void {
-    this.ctx.beginPath()
-    this.ctx.moveTo(x, y)
-    this.ctx.lineTo(this.mouse.x, this.mouse.y)
-    this.ctx.stroke()
-  }
-
   drawLine(angle: number, x: number, y: number): void {
     const dx = this.mouse.x - x
     const dy = this.mouse.y - y

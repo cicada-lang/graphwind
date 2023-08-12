@@ -32,3 +32,7 @@ The layout problem:
 
 (1) The position of nodes -- `Node -> (Number, Number)`
 (2) The curve of edges -- `Edge -> Interval -> (Number, Number)`
+
+# # Lecture 2
+
+[ [PLAYLIST](https://www.youtube.com/playlist?list=PLubYOWSl9mIsUBpLQTuAdWwyqMZ7x0nCb) ]
