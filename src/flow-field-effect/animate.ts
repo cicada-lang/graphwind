@@ -1,10 +1,7 @@
 import { State } from "./State.js"
 import { drawLine } from "./drawLine.js"
 
-export function animate(
-  ctx: CanvasRenderingContext2D,
-  state: State,
-): void {
+export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.clearRect(0, 0, state.width, state.height)
 
   state.radius += state.radiusVelocity
