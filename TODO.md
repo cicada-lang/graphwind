@@ -2,12 +2,14 @@
 
 refactor flow-field-effect
 
-demo-flow-field-effect.html
+dark and light mode
 
-# learn
+light mode use tailwind color
 
-learn canvas API
+# super-magnet
 
-learn graph visualization
+demo-super-magnet.html
 
-# visualization of trees
+# binary-tree
+
+binary-tree
