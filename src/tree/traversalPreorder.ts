@@ -1,11 +1,11 @@
 import { Node } from "./Node.js"
 
-// node, first, second
+// node, first, second, ...
 
-export function* traversalPreorder(node: Node): Generator<Node> {
-  yield node
+export function* traversalPreorder(target: Node): Generator<Node> {
+  yield target
 
-  for (const child of node.children) {
+  for (const child of target.children) {
     for (const node of traversalPreorder(child)) {
       yield node
     }

@@ -1,11 +1,5 @@
 # tree
 
-[tree] traversalPostorder
-
-traversalPostorder.test.ts
-
-[tree] traversalInorder
-
 # binary-tree-inorder-grid-layout
 
 setup demo binary-tree-inorder-grid-layout

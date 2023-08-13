@@ -1,4 +1,4 @@
-import { drawLine } from "../../utils/drawLine.js"
+import { drawLine } from "../../convas/drawLine.js"
 import { State } from "./State.js"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
