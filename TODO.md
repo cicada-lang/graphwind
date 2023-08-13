@@ -1,8 +1,8 @@
 # graph
 
-graphFromAdjacencyList
+createGraphFromAdjacencyList
 
-graphFromIncidenceRelation
+createGraphFromIncidenceRelation
 
 # layered-drawing-of-trees
 
