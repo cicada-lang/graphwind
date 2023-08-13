@@ -2,6 +2,7 @@
   "name": "graphwind",
   "version": "0.0.1",
   "repository": "github:cicada-lang/graphwind",
+  "type": "module",
   "files": [
     "lib"
   ],

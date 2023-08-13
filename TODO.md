@@ -1,10 +1,8 @@
+# layered-drawing-of-trees
+
 # graph
 
-createGraphFromAdjacencyList
-
 createGraphFromIncidenceRelation
-
-# layered-drawing-of-trees
 
 # flow-field-effect
 
