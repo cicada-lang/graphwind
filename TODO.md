@@ -1,10 +1,10 @@
 # flow-field-effect
 
-refactor flow-field-effect
-
-dark and light mode
+window resize should not create new state -- be more stable
 
 light mode use tailwind color
+
+refactor flow-field-effect
 
 # super-magnet
 

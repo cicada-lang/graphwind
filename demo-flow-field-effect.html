@@ -4,11 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
     <script type="module" src="./lib/main.js"></script>
     <title>Flow Field Effect | Graphwind</title>
   </head>
 
   <body>
-    <canvas id="canvas" class="h-screen w-screen block bg-black"></canvas>
+    <div
+      x-data="{
+        isDarkMode: true
+      }"
+    >
+      <button
+        class="fixed top-0 right-0 z-20 m-3 px-2 py-1"
+        @click="isDarkMode = !isDarkMode"
+        :class="{
+          'bg-black text-white border border-white': isDarkMode,
+          'bg-white text-black border border-black': !isDarkMode,
+        }"
+      >
+        <span x-text="isDarkMode ? 'Dark' : 'Light'"></span>
+      </button>
+
+      <canvas
+        id="canvas"
+        class="fixed top-0 left-0 h-screen w-screen"
+        :class="{
+          'bg-black': isDarkMode,
+          'bg-white': !isDarkMode,
+        }"
+      ></canvas>
+    </div>
   </body>
 </html>

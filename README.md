@@ -9,7 +9,7 @@ A library for drawing graphs on canvas.
 Install this library by the following command:
 
 ```
-npm -g i @cicada-lang/graphwind
+npm install @cicada-lang/graphwind
 ```
 
 ## Development
