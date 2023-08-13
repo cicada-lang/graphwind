@@ -1,12 +1,12 @@
 # tree
 
-traversalInorder.test.ts
+use vitest
 
 [tree] traversalPostorder
 
 traversalPostorder.test.ts
 
-[tree] traversalPreorder
+[tree] traversalInorder
 
 # binary-tree-inorder-grid-layout
 
