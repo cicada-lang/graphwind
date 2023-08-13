@@ -1,10 +1,14 @@
 # tree
 
+createTreeFromSexp
+
+traversalInorder.test.ts
+
 [tree] traversalPostorder
 
-[tree] traversalPreorder
+traversalPostorder.test.ts
 
-[tree] traversalInorder
+[tree] traversalPreorder
 
 # binary-tree-inorder-grid-layout
 
