@@ -2,8 +2,6 @@
 
 NodeConnection -- edge: Edge, and node: Node
 
-Edge -- with first and second node
-
 graphFromAdjacencyList
 
 graphFromIncidenceRelation

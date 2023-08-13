@@ -1,1 +1,4 @@
-export type Edge = {}
+export type Edge = {
+  first: Node
+  second: Node
+}
