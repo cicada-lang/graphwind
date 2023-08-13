@@ -6,8 +6,6 @@
 
 [tree] traversalInorder
 
-[tree] depth(root: Node, node: Node): number
-
 # binary-tree-inorder-grid-layout
 
 setup demo binary-tree-inorder-grid-layout
