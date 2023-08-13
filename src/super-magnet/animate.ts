@@ -4,7 +4,7 @@ import { State } from "./State.js"
 export function animate(
   ctx: CanvasRenderingContext2D,
   state: State,
-  currentTime?: number,
+
 ): void {
   ctx.clearRect(0, 0, state.width, state.height)
 
@@ -14,5 +14,5 @@ export function animate(
     }
   }
 
-  requestAnimationFrame((time) => animate(ctx, state, time))
+  requestAnimationFrame(() => animate(ctx, state, ))
 }

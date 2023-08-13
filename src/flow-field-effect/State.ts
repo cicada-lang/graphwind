@@ -7,12 +7,6 @@ export type State = {
     y: number
   }
 
-  // Faster FPS will be slow to 60 FPS.
-  // Slower FPS will be run as fast as possible.
-  lastTime: number
-  interval: number
-  timer: number
-
   cellSize: number
 
   // About the curve of the field.

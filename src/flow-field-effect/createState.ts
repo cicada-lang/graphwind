@@ -1,5 +1,4 @@
 import { State } from "./State.js"
-import { createGradient } from "./createGradient.js"
 
 export function createState(
   ctx: CanvasRenderingContext2D,
@@ -15,13 +14,8 @@ export function createState(
   options.mouse.x = options.width / 2
   options.mouse.y = options.height / 2
 
-
   return {
     ...options,
-
-    lastTime: 0,
-    interval: 1000 / 60,
-    timer: 0,
 
     cellSize: 13,
 
