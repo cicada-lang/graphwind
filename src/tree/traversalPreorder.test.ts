@@ -1,3 +1,4 @@
+import { expect, test } from "vitest"
 import { createTree } from "./createTree.js"
 import { traversalPreorder } from "./traversalPreorder.js"
 
@@ -15,4 +16,17 @@ const tree = createTree({
   ],
 })
 
-console.log(Array.from(traversalPreorder(tree)).map((node) => node.name))
+test("traversalPreorder", () => {
+  expect(Array.from(traversalPreorder(tree)).map((node) => node.name)).toEqual([
+    "a",
+    "b",
+    "d",
+    "e",
+    "c",
+    "f",
+    "h",
+    "i",
+    "g",
+    "j",
+  ])
+})

@@ -9,13 +9,21 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "test:js": "test-runner test node 'lib/**/*.test.js'",
-    "test": "npm run test:js",
+    "test:ts": "vitest --dir src --threads false --run",
+    "test:watch": "vitest --dir src --threads false",
+    "test:coverage": "vitest --dir src --threads false --run --coverage ",
+    "test:gui": "vitest --dir src --threads false --ui",
+    "test": "npm run test:ts",
     "format": "prettier src docs --write"
   },
   "devDependencies": {
     "@types/node": "^20.4.10",
     "@xieyuheng/test-runner": "^0.2.9",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.1",
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/coverage-istanbul": "^0.34.1",
+    "@vitest/ui": "^0.34.1",
     "prettier": "^3.0.1",
     "prettier-plugin-organize-imports": "^3.2.3",
     "prettier-plugin-tailwindcss": "^0.4.1",

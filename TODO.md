@@ -1,7 +1,5 @@
 # tree
 
-use vitest
-
 [tree] traversalPostorder
 
 traversalPostorder.test.ts
