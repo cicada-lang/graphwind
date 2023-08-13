@@ -1,7 +1,5 @@
 # tree
 
-[tree] Node has parent children
-
 [tree] traversalPostorder
 
 [tree] traversalPreorder
