@@ -15,9 +15,6 @@ export function createState(
   options.mouse.x = options.width / 2
   options.mouse.y = options.height / 2
 
-  const gradient = createGradient(ctx, options)
-
-  ctx.strokeStyle = gradient
 
   return {
     ...options,

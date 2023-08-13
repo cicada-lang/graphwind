@@ -1,6 +1,6 @@
 # flow-field-effect
 
-window resize should not create new state -- be more stable
+[bug] why update `ctx.strokeStyle` during window `resize` will make the color brighter
 
 light mode use tailwind color
 

@@ -1,5 +1,6 @@
-import { animate } from "./flow-field-effect/animate.js"
-import { createState } from "./flow-field-effect/createState.js"
+import { animate } from "./animate.js"
+import { createGradient } from "./createGradient.js"
+import { createState } from "./createState.js"
 
 window.onload = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -13,13 +14,23 @@ window.onload = () => {
     y: 0,
   }
 
-  let state = createState(ctx, {
+  const state = createState(ctx, {
     width: canvas.width,
     height: canvas.height,
     mouse,
   })
 
+  ctx.strokeStyle = createGradient(ctx, {
+    width: canvas.width,
+    height: canvas.height,
+  })
+
   animate(ctx, state)
+
+  ctx.strokeStyle = createGradient(ctx, {
+    width: canvas.width,
+    height: canvas.height,
+  })
 
   window.addEventListener("mousemove", (event) => {
     mouse.x = event.x
@@ -30,12 +41,12 @@ window.onload = () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    state = createState(ctx, {
+    state.width = window.innerWidth
+    state.height = window.innerHeight
+
+    ctx.strokeStyle = createGradient(ctx, {
       width: canvas.width,
       height: canvas.height,
-      mouse,
     })
-
-    animate(ctx, state)
   })
 }
