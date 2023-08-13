@@ -1,7 +1,5 @@
 # graph
 
-NodeConnection -- edge: Edge, and node: Node
-
 graphFromAdjacencyList
 
 graphFromIncidenceRelation
