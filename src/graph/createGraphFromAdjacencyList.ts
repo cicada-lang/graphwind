@@ -1,8 +1,8 @@
 import { Graph } from "./Graph.js"
+import { addNode } from "./addNode.js"
+import { connect } from "./connect.js"
 import { createEmptyGraph } from "./createEmptyGraph.js"
 import { createNode } from "./createNode.js"
-import { graphAddNode } from "./graphAddNode.js"
-import { graphConnect } from "./graphConnect.js"
 
 // `[node, ...rest]` means `node` should be connected to the `rest` nodes.
 export function createGraphFromAdjacencyList(
@@ -13,10 +13,10 @@ export function createGraphFromAdjacencyList(
   for (const adjacency of adjacencyList) {
     const [firstName, ...rest] = adjacency
     const firstNode = createNode(firstName)
-    graphAddNode(graph, firstNode)
+    addNode(graph, firstNode)
 
     for (const name of rest) {
-      graphConnect(graph, firstNode, createNode(name))
+      connect(graph, firstNode, createNode(name))
     }
   }
 

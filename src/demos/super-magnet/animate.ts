@@ -1,11 +1,7 @@
-import { drawLine } from "../utils/drawLine.js"
+import { drawLine } from "../../utils/drawLine.js"
 import { State } from "./State.js"
 
-export function animate(
-  ctx: CanvasRenderingContext2D,
-  state: State,
-
-): void {
+export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.clearRect(0, 0, state.width, state.height)
 
   for (let x = state.cellSize; x < state.width; x += state.cellSize) {
@@ -14,5 +10,5 @@ export function animate(
     }
   }
 
-  requestAnimationFrame(() => animate(ctx, state, ))
+  requestAnimationFrame(() => animate(ctx, state))
 }

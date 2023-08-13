@@ -1,4 +1,28 @@
-# layered-drawing-of-trees
+# tree
+
+[tree] Node has parent children
+
+[tree] traversalPostorder
+
+[tree] traversalPreorder
+
+[tree] traversalInorder
+
+[tree] depth(root: Node, node: Node): number
+
+# binary-tree-inorder-grid-layout
+
+setup demo binary-tree-inorder-grid-layout
+
+State
+
+cellSize
+
+layeredLayout(tree): Map<string, {x: number, y: number}>
+
+# tree-layered-layout
+
+# tree-horizontal-vertical-layout
 
 # graph
 
