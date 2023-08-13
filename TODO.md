@@ -1,7 +1,5 @@
 # tree
 
-createTreeFromSexp
-
 traversalInorder.test.ts
 
 [tree] traversalPostorder
