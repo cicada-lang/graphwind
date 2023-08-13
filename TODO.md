@@ -1,7 +1,5 @@
 # graph
 
-Node -- with id, name and connections
-
 NodeConnection -- edge: Edge, and node: Node
 
 Edge -- with first and second node
