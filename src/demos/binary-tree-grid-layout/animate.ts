@@ -7,8 +7,8 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
 
   for (let x = 0; x < state.width; x += state.unit) {
     for (let y = 0; y < state.height; y += state.unit) {
-      ctx.strokeStyle = "hsl(240, 90%, 50%)"
-      ctx.lineWidth = 0.5
+      ctx.strokeStyle = "hsl(200, 50%, 50%)"
+      ctx.lineWidth = 0.3
       ctx.beginPath()
       ctx.moveTo(x, y)
       ctx.lineTo(x + state.unit, y)
@@ -42,8 +42,8 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
     const second = layout.nodes.get(edge.second.id)
     if (second === undefined) continue
 
-    ctx.strokeStyle = "hsl(240, 90%, 0%)"
-    ctx.lineWidth = 1.5
+    ctx.strokeStyle = "black"
+    ctx.lineWidth = 1
 
     ctx.beginPath()
     ctx.moveTo(
