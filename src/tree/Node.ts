@@ -1,5 +1,5 @@
 export type Node = {
-  name: string
+  id: string
   parent?: Node
   children: Array<Node>
 }

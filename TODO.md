@@ -1,14 +1,10 @@
+# binary-tree-grid-layout
+
+show node id
+
+show preorder and postorder
+
 # tree
-
-# binary-tree-inorder-grid-layout
-
-setup demo binary-tree-inorder-grid-layout
-
-State
-
-cellSize
-
-layeredLayout(tree): Map<string, {x: number, y: number}>
 
 # graph-force-directed-layout
 

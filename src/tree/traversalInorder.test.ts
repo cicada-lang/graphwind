@@ -3,21 +3,21 @@ import { createTree } from "./createTree.js"
 import { traversalInorder } from "./traversalInorder.js"
 
 const tree = createTree({
-  name: "a",
+  id: "a",
   children: [
-    { name: "b", children: [{ name: "d" }, { name: "e" }] },
+    { id: "b", children: [{ id: "d" }, { id: "e" }] },
     {
-      name: "c",
+      id: "c",
       children: [
-        { name: "f", children: [{ name: "h" }, { name: "i" }] },
-        { name: "g", children: [{ name: "j" }] },
+        { id: "f", children: [{ id: "h" }, { id: "i" }] },
+        { id: "g", children: [{ id: "j" }] },
       ],
     },
   ],
 })
 
 test("traversalInorder", () => {
-  expect(Array.from(traversalInorder(tree)).map((node) => node.name)).toEqual([
+  expect(Array.from(traversalInorder(tree)).map((node) => node.id)).toEqual([
     "d",
     "b",
     "e",

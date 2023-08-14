@@ -3,21 +3,30 @@ import { createTree } from "./createTree.js"
 import { traversalPostorder } from "./traversalPostorder.js"
 
 const tree = createTree({
-  name: "a",
+  id: "a",
   children: [
-    { name: "b", children: [{ name: "d" }, { name: "e" }] },
+    { id: "b", children: [{ id: "d" }, { id: "e" }] },
     {
-      name: "c",
+      id: "c",
       children: [
-        { name: "f", children: [{ name: "h" }, { name: "i" }] },
-        { name: "g", children: [{ name: "j" }] },
+        { id: "f", children: [{ id: "h" }, { id: "i" }] },
+        { id: "g", children: [{ id: "j" }] },
       ],
     },
   ],
 })
 
 test("traversalPostorder", () => {
-  expect(Array.from(traversalPostorder(tree)).map((node) => node.name)).toEqual(
-    ["d", "e", "b", "h", "i", "f", "j", "g", "c", "a"],
-  )
+  expect(Array.from(traversalPostorder(tree)).map((node) => node.id)).toEqual([
+    "d",
+    "e",
+    "b",
+    "h",
+    "i",
+    "f",
+    "j",
+    "g",
+    "c",
+    "a",
+  ])
 })

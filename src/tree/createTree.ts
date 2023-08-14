@@ -2,12 +2,12 @@ import { Node } from "./Node.js"
 import { createNode } from "./createNode.js"
 
 type NodeExp = {
-  name: string
+  id: string
   children?: Array<NodeExp>
 }
 
 export function createTree(nodeExp: NodeExp): Node {
-  const node = createNode(nodeExp.name)
+  const node = createNode(nodeExp.id)
   for (const childExp of nodeExp.children || []) {
     const childNode = createTree(childExp)
     node.children.push(childNode)

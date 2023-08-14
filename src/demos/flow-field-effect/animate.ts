@@ -16,5 +16,6 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
       drawLine(ctx, state, angle, x, y)
     }
   }
+
   requestAnimationFrame(() => animate(ctx, state))
 }

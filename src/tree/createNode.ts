@@ -1,12 +1,12 @@
 import { Node } from "./Node.js"
 
 export function createNode(
-  name: string,
+  id: string,
   parent?: Node,
   children?: Array<Node>,
 ): Node {
   return {
-    name,
+    id,
     parent,
     children: children || [],
   }
