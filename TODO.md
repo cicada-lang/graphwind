@@ -14,6 +14,10 @@ layeredLayout(tree): Map<string, {x: number, y: number}>
 
 # tree-horizontal-vertical-layout
 
+# tree-radial-layout
+
+# graph-force-directed-layout
+
 # graph
 
 createGraphFromIncidenceRelation
