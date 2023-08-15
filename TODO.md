@@ -1,7 +1,5 @@
 # graph
 
-extract `graphNodeNeighbors`
-
 createGraphFromIncidenceRelation
 
 # binary-tree-grid-layout
