@@ -38,10 +38,10 @@ export function drawTree(
   }
 
   for (const [name, { x, y }] of layout.nodes) {
-    const boxWidth = 40
-    const boxHeight = 30
+    const boxWidth = 34
+    const boxHeight = 26
 
-    ctx.strokeStyle = colors.sky[600]
+    ctx.strokeStyle = "black"
     ctx.lineWidth = 2
 
     ctx.beginPath()

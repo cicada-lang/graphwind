@@ -1,7 +1,3 @@
-# binary-tree-grid-layout
-
-[binary-tree-grid-layout] show text about order
-
 # graph-force-directed-layout
 
 # tree-layered-layout

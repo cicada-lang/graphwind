@@ -22,19 +22,25 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
     ],
   })
 
+  ctx.fillText("preorder", state.unit * 2, state.unit * (2 - 1))
+
   drawTree(ctx, state, tree, {
     mode: "preorder",
-    offset: [state.unit * 2, state.unit * 1],
+    offset: [state.unit * 2, state.unit * 2],
   })
+
+  ctx.fillText("inorder", state.unit * 2, state.unit * (2 + 5 - 1))
 
   drawTree(ctx, state, tree, {
     mode: "inorder",
-    offset: [state.unit * 2, state.unit * (1 + 5)],
+    offset: [state.unit * 2, state.unit * (2 + 5)],
   })
+
+  ctx.fillText("postorder", state.unit * 2, state.unit * (2 + 10 - 1))
 
   drawTree(ctx, state, tree, {
     mode: "postorder",
-    offset: [state.unit * 2, state.unit * (1 + 10)],
+    offset: [state.unit * 2, state.unit * (2 + 10)],
   })
 
   requestAnimationFrame(() => animate(ctx, state))
