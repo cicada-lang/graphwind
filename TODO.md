@@ -1,14 +1,10 @@
 # binary-tree-grid-layout
 
-show node id
+use tailwind color
 
 show preorder and postorder
 
-# tree
-
 # graph-force-directed-layout
-
-simple spring
 
 # tree-layered-layout
 
@@ -26,8 +22,8 @@ refactor flow-field-effect
 
 # build
 
-should use `.ts` file extension and use esbuild
+use `.ts` file extension in `src/` and use esbuild
 
-esbuild app.jsx --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16
-
+```
 npx esbuild src/demos/flow-field-effect/main.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=build/flow-field-effect.js
+```

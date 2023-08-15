@@ -58,24 +58,32 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   }
 
   for (const [name, { x, y }] of layout.nodes) {
+    const boxWidth = 40
+    const boxHeight = 30
+
     ctx.strokeStyle = "hsl(240, 90%, 50%)"
     ctx.lineWidth = 2
 
     ctx.beginPath()
     ctx.clearRect(
-      offset[0] + x * state.unit - 30 / 2,
-      offset[1] + y * state.unit - 20 / 2,
-      30,
-      20,
+      offset[0] + x * state.unit - boxWidth / 2,
+      offset[1] + y * state.unit - boxHeight / 2,
+      boxWidth,
+      boxHeight,
     )
     ctx.roundRect(
-      offset[0] + x * state.unit - 30 / 2,
-      offset[1] + y * state.unit - 20 / 2,
-      30,
-      20,
-      5,
+      offset[0] + x * state.unit - boxWidth / 2,
+      offset[1] + y * state.unit - boxHeight / 2,
+      boxWidth,
+      boxHeight,
+      4,
     )
     ctx.stroke()
+
+    ctx.font = "20px sans-serif"
+    ctx.textBaseline = "middle"
+    ctx.textAlign = "center"
+    ctx.fillText(name, offset[0] + x * state.unit, offset[1] + y * state.unit)
   }
 
   requestAnimationFrame(() => animate(ctx, state))
