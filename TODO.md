@@ -1,7 +1,5 @@
 # graph-force-directed-layout
 
-[graph-force-directed-layout] `graphLayoutRandom`
-
 [graph-force-directed-layout] `GraphLayout` -- with `nodePositions`
 
 [graph-force-directed-layout] `drawGraph`
