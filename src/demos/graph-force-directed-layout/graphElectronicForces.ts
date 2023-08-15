@@ -13,15 +13,19 @@ export function graphElectronicForces(
     const position = layout.nodePositions.get(node)
     if (position === undefined) continue
 
+    const force: [number, number] = [0, 0]
     for (const other of graphNodes(graph)) {
       if (other !== node) {
         const otherPosition = layout.nodePositions.get(other)
         if (otherPosition === undefined) continue
 
-        const force = electronicForce(position, otherPosition)
-        forces.set(node, force)
+        const [x, y] = electronicForce(position, otherPosition)
+        force[0] += x
+        force[1] += y
       }
     }
+
+    forces.set(node, force)
   }
 
   return forces

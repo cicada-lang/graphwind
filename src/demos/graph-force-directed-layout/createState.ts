@@ -21,7 +21,7 @@ export function createState(
     unit: 40,
 
     lastTime: 0,
-    interval: 1000 / 16,
+    interval: 1000/ 16,
     timer: 0,
   }
 }

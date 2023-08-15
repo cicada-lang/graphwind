@@ -17,7 +17,7 @@ export function animate(
   const deltaTime = passedTime - state.lastTime
   state.lastTime = passedTime
 
-  if (state.timer > state.interval) {
+  if (passedTime === 0 || state.timer > state.interval) {
     ctx.clearRect(0, 0, state.width, state.height)
     evolveGraph(graph, layout, { step })
     drawGraph(ctx, graph, layout)

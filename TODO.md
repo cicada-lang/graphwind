@@ -1,6 +1,6 @@
 # graph-force-directed-layout
 
-[graph-force-directed-layout] evolveGraph -- update layout by force
+[graph-force-directed-layout] refactor
 
 [graph-force-directed-layout] add padding to canvas
 

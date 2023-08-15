@@ -2,7 +2,7 @@ export function springForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
-  const C = 1 / 200
+  const C = 1 / 20
   const springLength = 100
 
   const deltaX = second[0] - first[0]
