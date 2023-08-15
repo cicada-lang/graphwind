@@ -1,12 +1,8 @@
 # graph-force-directed-layout
 
-[graph-force-directed-layout] `GraphLayout` -- with `nodePositions`
-
-[graph-force-directed-layout] `drawGraph`
-
-[graph-force-directed-layout] `drawNode`
-
 [graph-force-directed-layout] `drawEdge`
+
+[graph-force-directed-layout] update layout by force
 
 # interaction-net-layout
 
