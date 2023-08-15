@@ -1,6 +1,6 @@
 # graph-force-directed-layout
 
-[graph-force-directed-layout] `drawEdge`
+[graph-force-directed-layout] improve `exampleGraph`
 
 [graph-force-directed-layout] update layout by force
 
