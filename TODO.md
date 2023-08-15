@@ -1,7 +1,3 @@
-# graph
-
-createGraphFromIncidenceRelation
-
 # binary-tree-grid-layout
 
 show node id
