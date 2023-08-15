@@ -1,19 +1,20 @@
 import colors from "tailwindcss/colors"
 import { Node } from "../../tree/Node.ts"
 import { State } from "./State.ts"
-import { treeLayout } from "./treeLayout.ts"
+import { TraversalMode, layoutTree } from "./layoutTree.ts"
 
 export function drawTree(
   ctx: CanvasRenderingContext2D,
   state: State,
   tree: Node,
   options: {
+    mode: TraversalMode
     offset: [number, number]
   },
 ): void {
   const { offset } = options
 
-  const layout = treeLayout(tree)
+  const layout = layoutTree(tree, options)
 
   for (const edge of layout.edges) {
     const first = layout.nodes.get(edge.first.id)
