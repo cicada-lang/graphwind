@@ -6,6 +6,6 @@ export type Edge = {
 }
 
 export type Graph = {
-  nodeNeighbors: Map<Node, Array<Node>>
+  nodeNeighbors: Map<Node, Set<Node>>
   edges: Array<Edge>
 }

@@ -1,9 +1,6 @@
 import { Graph, Node } from "./Graph.js"
 
-export function graphNodeNeighborsOrFail(
-  graph: Graph,
-  node: Node,
-): Array<Node> {
+export function graphNodeNeighborsOrFail(graph: Graph, node: Node): Set<Node> {
   const neighbors = graph.nodeNeighbors.get(node)
 
   if (neighbors === undefined) {
