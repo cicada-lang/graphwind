@@ -8,6 +8,7 @@ const inputFiles = [
   "demo-drawing-board.html",
   "demo-super-magnet.html",
   "demo-binary-tree-grid-layout.html",
+  "demo-graph-force-directed-layout.html",
 ]
 
 function buildInput() {
