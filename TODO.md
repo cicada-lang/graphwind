@@ -1,3 +1,11 @@
+rename index.ts to index.ts
+
+./flow-field-effect/index.ts
+./drawing-board/index.ts
+./super-magnet/index.ts
+./binary-tree-grid-layout/index.ts
+./play/index.ts
+
 [flow-field-effect] light mode use dark tailwind color
 
 # binary-tree-grid-layout
