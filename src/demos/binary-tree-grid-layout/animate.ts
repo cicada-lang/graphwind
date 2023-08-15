@@ -43,5 +43,5 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
     offset: [state.unit * 2, state.unit * (2 + 10)],
   })
 
-  requestAnimationFrame(() => animate(ctx, state))
+  // requestAnimationFrame(() => animate(ctx, state))
 }
