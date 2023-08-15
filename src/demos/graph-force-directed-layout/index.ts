@@ -1,8 +1,10 @@
 import { Mouse } from "./Mouse.ts"
 import { animate } from "./animate.ts"
 import { createState } from "./createState.ts"
+import { exampleGraph } from "./exampleGraph.ts"
+import { graphLayoutRandom } from "./graphLayoutRandom.ts"
 
-export function main(){
+export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
@@ -21,7 +23,16 @@ export function main(){
     mouse,
   })
 
-  animate(ctx, state)
+  const graph = exampleGraph()
+
+  const layout = graphLayoutRandom(graph, {
+    limit: {
+      width: state.width,
+      height: state.height,
+    },
+  })
+
+  animate(ctx, state, graph, layout)
 
   window.addEventListener("mousedown", (event) => {
     mouse.isDown = true

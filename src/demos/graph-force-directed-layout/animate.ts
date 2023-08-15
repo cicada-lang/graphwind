@@ -1,21 +1,17 @@
+import { Graph } from "../../graph/Graph.ts"
+import { GraphLayout } from "./GraphLayout.ts"
 import { State } from "./State.ts"
 import { drawGraph } from "./drawGraph.ts"
-import { exampleGraph } from "./exampleGraph.ts"
-import { graphLayoutRandom } from "./graphLayoutRandom.ts"
 
-export function animate(ctx: CanvasRenderingContext2D, state: State): void {
+export function animate(
+  ctx: CanvasRenderingContext2D,
+  state: State,
+  graph: Graph,
+  layout: GraphLayout,
+): void {
   ctx.clearRect(0, 0, state.width, state.height)
-
-  const graph = exampleGraph()
-
-  const layout = graphLayoutRandom(graph, {
-    limit: {
-      width: state.width,
-      height: state.height,
-    },
-  })
 
   drawGraph(ctx, graph, layout)
 
-  // requestAnimationFrame(() => animate(ctx, state))
+  requestAnimationFrame(() => animate(ctx, state, graph, layout))
 }
