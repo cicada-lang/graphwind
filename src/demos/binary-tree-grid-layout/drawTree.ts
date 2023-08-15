@@ -1,20 +1,19 @@
-import colors from "tailwindcss/colors"
 import { Node } from "../../tree/Node.ts"
 import { State } from "./State.ts"
-import { TraversalMode, layoutTree } from "./layoutTree.ts"
+import { TraversalOrder, treeLayoutByOrder } from "./treeLayoutByOrder.ts"
 
 export function drawTree(
   ctx: CanvasRenderingContext2D,
   state: State,
   tree: Node,
   options: {
-    mode: TraversalMode
+    order: TraversalOrder
     offset: [number, number]
   },
 ): void {
   const { offset } = options
 
-  const layout = layoutTree(tree, options)
+  const layout = treeLayoutByOrder(tree, options)
 
   for (const edge of layout.edges) {
     const first = layout.nodes.get(edge.first.id)
