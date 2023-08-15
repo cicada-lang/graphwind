@@ -1,6 +1,9 @@
 # typescript
 lib
 
+# vite
+build
+
 # pkg
 dist
 
