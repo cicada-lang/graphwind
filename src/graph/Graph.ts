@@ -1,7 +1,11 @@
-import { Edge } from "./Edge.js"
-import { Node } from "./Node.js"
+export type Node = string
+
+export type Edge = {
+  first: Node
+  second: Node
+}
 
 export type Graph = {
-  nodes: Array<Node>
+  nodeNeighbors: Map<Node, Array<Node>>
   edges: Array<Edge>
 }

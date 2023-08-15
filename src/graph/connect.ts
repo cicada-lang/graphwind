@@ -1,13 +1,22 @@
-import { Graph } from "./Graph.js"
-import { Node } from "./Node.js"
-import { addEdge } from "./addEdge.js"
-import { createEdge } from "./createEdge.js"
+import { Graph, Node } from "./Graph.js"
+import { addNode } from "./addNode.js"
 
 export function connect(graph: Graph, first: Node, second: Node): void {
-  const edge = createEdge(first, second)
+  addNode(graph, first)
+  addNode(graph, second)
 
-  first.connections.push({ node: second, edge })
-  second.connections.push({ node: first, edge })
+  const firstNeighbors = graph.nodeNeighbors.get(first)
+  const secondNeighbors = graph.nodeNeighbors.get(second)
+  if (firstNeighbors === undefined) {
+    throw new Error()
+  }
 
-  addEdge(graph, edge)
+  if (secondNeighbors === undefined) {
+    throw new Error()
+  }
+
+  firstNeighbors.push(second)
+  secondNeighbors.push(first)
+
+  graph.edges.push({ first, second })
 }

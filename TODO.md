@@ -1,3 +1,11 @@
+# graph
+
+add `graph` prefix to methods
+
+extract `graphNodeNeighbors`
+
+createGraphFromIncidenceRelation
+
 # binary-tree-grid-layout
 
 show node id
@@ -15,10 +23,6 @@ simple spring
 # tree-horizontal-vertical-layout
 
 # tree-radial-layout
-
-# graph
-
-createGraphFromIncidenceRelation
 
 # flow-field-effect
 

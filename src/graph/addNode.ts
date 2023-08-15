@@ -1,6 +1,8 @@
-import { Graph } from "./Graph.js"
-import { Node } from "./Node.js"
+import { Graph, Node } from "./Graph.js"
 
 export function addNode(graph: Graph, node: Node): void {
-  graph.nodes.push(node)
+  const neighbors = graph.nodeNeighbors.get(node)
+  if (neighbors === undefined) {
+    graph.nodeNeighbors.set(node, [])
+  }
 }
