@@ -9,7 +9,9 @@ export function graphFromAdjacencyList(
 
   for (const [node, neighbors] of Object.entries(adjacencyList)) {
     for (const neighbor of neighbors) {
-      graphConnect(graph, node, neighbor)
+      if (node !== neighbor) {
+        graphConnect(graph, node, neighbor)
+      }
     }
   }
 

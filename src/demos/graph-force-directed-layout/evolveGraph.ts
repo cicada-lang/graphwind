@@ -14,20 +14,27 @@ export function evolveGraph(
 
   const coolingFactor = 0.999
 
-  const forces = totalForces(graph, layout)
+  const springForces = springField(graph, layout)
+  const electronicForces = electronicField(graph, layout)
 
   for (const node of graphNodes(graph)) {
     const position = layout.nodePositions.get(node)
     if (position === undefined) continue
-    const force = forces.get(node)
-    if (force === undefined) continue
+    const springForce = springForces.get(node)
+    if (springForce === undefined) continue
 
-    position[0] += force[0] * coolingFactor ** step
-    position[1] += force[1] * coolingFactor ** step
+    position[0] += springForce[0] * coolingFactor ** step
+    position[1] += springForce[1] * coolingFactor ** step
+
+    const electronicForce = electronicForces.get(node)
+    if (electronicForce === undefined) continue
+
+    position[0] += electronicForce[0] * coolingFactor ** step
+    position[1] += electronicForce[1] * coolingFactor ** step
   }
 }
 
-export function totalForces(
+export function electronicField(
   graph: Graph,
   layout: GraphLayout,
 ): Map<Node, [number, number]> {
@@ -37,13 +44,12 @@ export function totalForces(
     const position = layout.nodePositions.get(node)
     if (position === undefined) continue
 
-    const neighbors = graphNodeNeighborsOrFail(graph, node)
-    for (const neighbor of neighbors) {
-      if (neighbor !== node) {
-        const neighborPosition = layout.nodePositions.get(neighbor)
-        if (neighborPosition === undefined) continue
+    for (const other of graphNodes(graph)) {
+      if (other !== node) {
+        const otherPosition = layout.nodePositions.get(other)
+        if (otherPosition === undefined) continue
 
-        const force = totalForce(position, neighborPosition)
+        const force = electronicForce(position, otherPosition)
         forces.set(node, force)
       }
     }
@@ -52,21 +58,11 @@ export function totalForces(
   return forces
 }
 
-export function totalForce(
-  first: [number, number],
-  second: [number, number],
-): [number, number] {
-  const e = electronicForce(first, second)
-  const s = springForces(first, second)
-
-  return [e[0] + s[0], e[1] + s[1]]
-}
-
 export function electronicForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
-  const C = 200
+  const C = 1000
 
   const deltaX = second[0] - first[0]
   const deltaY = second[1] - first[1]
@@ -82,12 +78,36 @@ export function electronicForce(
   return [forceX, forceY]
 }
 
-export function springForces(
+export function springField(
+  graph: Graph,
+  layout: GraphLayout,
+): Map<Node, [number, number]> {
+  const forces = new Map()
+
+  for (const node of graphNodes(graph)) {
+    const position = layout.nodePositions.get(node)
+    if (position === undefined) continue
+
+    for (const neighbor of graphNodeNeighborsOrFail(graph, node)) {
+      if (neighbor !== node) {
+        const neighborPosition = layout.nodePositions.get(neighbor)
+        if (neighborPosition === undefined) continue
+
+        const force = springForce(position, neighborPosition)
+        forces.set(node, force)
+      }
+    }
+  }
+
+  return forces
+}
+
+export function springForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
   const C = 1 / 200
-  const springLength = 50
+  const springLength = 100
 
   const deltaX = second[0] - first[0]
   const deltaY = second[1] - first[1]
