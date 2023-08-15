@@ -1,12 +1,12 @@
 import { test } from "vitest"
-import { createGraphFromIncidenceRelation } from "./createGraphFromIncidenceRelation.js"
+import { graphFromIncidenceRelation } from "./graphFromIncidenceRelation.js"
 
-const graph = createGraphFromIncidenceRelation([
+const graph = graphFromIncidenceRelation([
   ["b", "c"],
   { first: "a", second: "b" },
 ])
 
-test("createGraphFromIncidenceRelation", () => {
+test("graphFromIncidenceRelation", () => {
   for (const [node, neighbors] of graph.nodeNeighbors) {
     console.log(node, neighbors)
   }

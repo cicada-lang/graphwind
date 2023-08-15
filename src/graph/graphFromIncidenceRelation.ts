@@ -2,7 +2,7 @@ import { Edge, Graph, Node } from "./Graph.js"
 import { createEmptyGraph } from "./createEmptyGraph.js"
 import { graphConnect } from "./graphConnect.js"
 
-export function createGraphFromIncidenceRelation(
+export function graphFromIncidenceRelation(
   incidences: Array<Edge | [Node, Node]>,
 ): Graph {
   const graph = createEmptyGraph()

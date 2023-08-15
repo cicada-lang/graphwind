@@ -1,13 +1,13 @@
 import { test } from "vitest"
-import { createGraphFromAdjacencyList } from "./createGraphFromAdjacencyList.js"
+import { graphFromAdjacencyList } from "./graphFromAdjacencyList.js"
 
-const graph = createGraphFromAdjacencyList({
+const graph = graphFromAdjacencyList({
   a: ["b", "c"],
   b: ["c"],
   c: ["a", "b", "c"],
 })
 
-test("createGraphFromAdjacencyList", () => {
+test("graphFromAdjacencyList", () => {
   for (const [node, neighbors] of graph.nodeNeighbors) {
     console.log(node, neighbors)
   }

@@ -2,7 +2,7 @@ import { Graph, Node } from "./Graph.js"
 import { createEmptyGraph } from "./createEmptyGraph.js"
 import { graphConnect } from "./graphConnect.js"
 
-export function createGraphFromAdjacencyList(
+export function graphFromAdjacencyList(
   adjacencyList: Record<Node, Array<Node>>,
 ): Graph {
   const graph = createEmptyGraph()
