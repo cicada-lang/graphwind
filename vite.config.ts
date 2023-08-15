@@ -18,6 +18,7 @@ function buildInput() {
 
 export default defineConfig({
   build: {
+    sourcemap: true,
     rollupOptions: {
       input: buildInput(),
     },

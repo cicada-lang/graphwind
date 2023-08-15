@@ -2,7 +2,7 @@ import { Mouse } from "./Mouse.js"
 import { animate } from "./animate.js"
 import { createState } from "./createState.js"
 
-window.onload = () => {
+export function main(){
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
