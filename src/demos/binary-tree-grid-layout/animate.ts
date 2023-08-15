@@ -1,3 +1,4 @@
+import colors from "tailwindcss/colors"
 import { createTree } from "../../tree/createTree.js"
 import { State } from "./State.js"
 import { treeLayout } from "./treeLayout.js"
@@ -7,7 +8,7 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
 
   for (let x = 0; x < state.width; x += state.unit) {
     for (let y = 0; y < state.height; y += state.unit) {
-      ctx.strokeStyle = "hsl(200, 50%, 50%)"
+      ctx.strokeStyle = colors.stone[500]
       ctx.lineWidth = 0.3
       ctx.beginPath()
       ctx.moveTo(x, y)
@@ -61,7 +62,7 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
     const boxWidth = 40
     const boxHeight = 30
 
-    ctx.strokeStyle = "hsl(240, 90%, 50%)"
+    ctx.strokeStyle = colors.sky[600]
     ctx.lineWidth = 2
 
     ctx.beginPath()

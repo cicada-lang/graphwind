@@ -1,7 +1,5 @@
 # binary-tree-grid-layout
 
-[binary-tree-grid-layout] use tailwind color
-
 [binary-tree-grid-layout] show preorder and postorder
 
 # graph-force-directed-layout
