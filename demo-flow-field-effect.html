@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
-    <script type="module" src="./src/demos/flow-field-effect/main.ts"></script>
     <title>Flow Field Effect | Graphwind</title>
   </head>
 
   <body>
+    <script type="module">
+      import { main } from "./src/demos/flow-field-effect/main.ts"
+      window.onload = () => main()
+    </script>
+
     <div
       x-data="{
         isDarkMode: true

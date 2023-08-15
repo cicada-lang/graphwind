@@ -1,3 +1,5 @@
+[flow-field-effect] light mode use dark tailwind color
+
 # binary-tree-grid-layout
 
 [binary-tree-grid-layout] use tailwind color
@@ -15,5 +17,3 @@
 # flow-field-effect
 
 [bug] why update `ctx.strokeStyle` during window `resize` will make the color brighter?
-
-[flow-field-effect] light mode use tailwind color
