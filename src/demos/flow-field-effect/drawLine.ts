@@ -1,4 +1,4 @@
-import { State } from "./State.js"
+import { State } from "./State.ts"
 
 export function drawLine(
   ctx: CanvasRenderingContext2D,

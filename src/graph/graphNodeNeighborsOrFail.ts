@@ -1,4 +1,4 @@
-import { Graph, Node } from "./Graph.js"
+import { Graph, Node } from "./Graph.ts"
 
 export function graphNodeNeighborsOrFail(graph: Graph, node: Node): Set<Node> {
   const neighbors = graph.nodeNeighbors.get(node)

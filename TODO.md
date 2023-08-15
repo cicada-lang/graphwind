@@ -1,5 +1,7 @@
 # binary-tree-grid-layout
 
+[binary-tree-grid-layout] `drawTree`
+
 [binary-tree-grid-layout] show preorder and postorder
 
 # graph-force-directed-layout

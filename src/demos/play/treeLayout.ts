@@ -1,8 +1,8 @@
-import { Node } from "../../tree/Node.js"
-import { depth } from "../../tree/depth.js"
-import { traversalInorder } from "../../tree/traversalInorder.js"
-import { treeEdges } from "../../tree/treeEdges.js"
-import { generatorEntries } from "../../utils/generatorEntries.js"
+import { Node } from "../../tree/Node.ts"
+import { depth } from "../../tree/depth.ts"
+import { traversalInorder } from "../../tree/traversalInorder.ts"
+import { treeEdges } from "../../tree/treeEdges.ts"
+import { generatorEntries } from "../../utils/generatorEntries.ts"
 
 export type NodeLayout = {
   x: number

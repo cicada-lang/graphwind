@@ -1,4 +1,4 @@
-import { Node } from "./Node.js"
+import { Node } from "./Node.ts"
 
 export function depth(node: Node): number {
   let depth = 0

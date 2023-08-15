@@ -1,23 +1,13 @@
 import colors from "tailwindcss/colors"
-import { createTree } from "../../tree/createTree.js"
-import { State } from "./State.js"
-import { treeLayout } from "./treeLayout.js"
+import { createTree } from "../../tree/createTree.ts"
+import { State } from "./State.ts"
+import { drawGrid } from "./drawGrid.ts"
+import { treeLayout } from "./treeLayout.ts"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.clearRect(0, 0, state.width, state.height)
 
-  for (let x = 0; x < state.width; x += state.unit) {
-    for (let y = 0; y < state.height; y += state.unit) {
-      ctx.strokeStyle = colors.stone[500]
-      ctx.lineWidth = 0.3
-      ctx.beginPath()
-      ctx.moveTo(x, y)
-      ctx.lineTo(x + state.unit, y)
-      ctx.moveTo(x, y)
-      ctx.lineTo(x, y + state.unit)
-      ctx.stroke()
-    }
-  }
+  drawGrid(ctx, state)
 
   const tree = createTree({
     id: "a",

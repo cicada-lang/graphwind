@@ -1,4 +1,4 @@
-import { Mouse } from "./Mouse.js"
+import { Mouse } from "./Mouse.ts"
 
 export type State = {
   width: number

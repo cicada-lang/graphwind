@@ -1,6 +1,6 @@
-import { Mouse } from "./Mouse.js"
-import { animate } from "./animate.js"
-import { createState } from "./createState.js"
+import { Mouse } from "./Mouse.ts"
+import { animate } from "./animate.ts"
+import { createState } from "./createState.ts"
 
 export function main(){
   const canvas = document.getElementById("canvas") as HTMLCanvasElement

@@ -1,4 +1,4 @@
-import { Graph } from "./Graph.js"
+import { Graph } from "./Graph.ts"
 
 export function createEmptyGraph(): Graph {
   return {

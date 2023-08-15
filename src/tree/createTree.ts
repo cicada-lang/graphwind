@@ -1,5 +1,5 @@
-import { Node } from "./Node.js"
-import { createNode } from "./createNode.js"
+import { Node } from "./Node.ts"
+import { createNode } from "./createNode.ts"
 
 type NodeExp = {
   id: string

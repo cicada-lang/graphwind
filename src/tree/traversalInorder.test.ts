@@ -1,6 +1,6 @@
 import { expect, test } from "vitest"
-import { createTree } from "./createTree.js"
-import { traversalInorder } from "./traversalInorder.js"
+import { createTree } from "./createTree.ts"
+import { traversalInorder } from "./traversalInorder.ts"
 
 const tree = createTree({
   id: "a",

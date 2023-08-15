@@ -1,6 +1,6 @@
-import { Edge, Graph, Node } from "./Graph.js"
-import { createEmptyGraph } from "./createEmptyGraph.js"
-import { graphConnect } from "./graphConnect.js"
+import { Edge, Graph, Node } from "./Graph.ts"
+import { createEmptyGraph } from "./createEmptyGraph.ts"
+import { graphConnect } from "./graphConnect.ts"
 
 export function graphFromIncidenceRelation(
   incidences: Array<Edge | [Node, Node]>,

@@ -1,6 +1,6 @@
-import { Graph, Node } from "./Graph.js"
-import { graphAddNode } from "./graphAddNode.js"
-import { graphNodeNeighborsOrFail } from "./graphNodeNeighborsOrFail.js"
+import { Graph, Node } from "./Graph.ts"
+import { graphAddNode } from "./graphAddNode.ts"
+import { graphNodeNeighborsOrFail } from "./graphNodeNeighborsOrFail.ts"
 
 export function graphConnect(graph: Graph, first: Node, second: Node): void {
   graphAddNode(graph, first)
