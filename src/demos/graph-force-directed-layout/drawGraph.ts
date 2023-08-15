@@ -20,6 +20,7 @@ export function drawGraph(
 
   for (const node of graphNodes(graph)) {
     const position = layout.nodePositions.get(node)
+    if (position === undefined) continue
     drawNode(ctx, node, position)
   }
 }
