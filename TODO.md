@@ -1,7 +1,5 @@
 # graph
 
-add `graph` prefix to methods
-
 extract `graphNodeNeighbors`
 
 createGraphFromIncidenceRelation
