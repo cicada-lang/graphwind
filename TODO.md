@@ -1,5 +1,11 @@
 # graph-force-directed-layout
 
+[graph-force-directed-layout] `drawGraph`
+
+[graph-force-directed-layout] `drawNode`
+
+[graph-force-directed-layout] `drawEdge`
+
 # tree-layered-layout
 
 # tree-horizontal-vertical-layout
