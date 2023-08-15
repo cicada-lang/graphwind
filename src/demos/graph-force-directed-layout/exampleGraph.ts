@@ -5,5 +5,9 @@ export function exampleGraph() {
     a: ["b", "c"],
     b: ["c"],
     c: ["a", "b", "c"],
+    d: ["a", "e"],
+    e: ["b"],
+    f: ["g", "c", "f"],
+    g: ["a", "b"],
   })
 }

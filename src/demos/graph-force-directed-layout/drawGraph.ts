@@ -10,16 +10,16 @@ export function drawGraph(
   graph: Graph,
   layout: GraphLayout,
 ): void {
-  for (const node of graphNodes(graph)) {
-    const position = layout.nodePositions.get(node)
-    drawNode(ctx, node, position)
-  }
-
   for (const edge of graphEdges(graph)) {
     const firstPosition = layout.nodePositions.get(edge.first)
     if (firstPosition === undefined) continue
     const secondPosition = layout.nodePositions.get(edge.second)
     if (secondPosition === undefined) continue
     drawEdge(ctx, firstPosition, secondPosition)
+  }
+
+  for (const node of graphNodes(graph)) {
+    const position = layout.nodePositions.get(node)
+    drawNode(ctx, node, position)
   }
 }

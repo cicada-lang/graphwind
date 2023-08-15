@@ -1,8 +1,8 @@
 # graph-force-directed-layout
 
-[graph-force-directed-layout] improve `exampleGraph`
-
 [graph-force-directed-layout] update layout by force
+
+[graph-force-directed-layout] add padding to canvas
 
 # interaction-net-layout
 
