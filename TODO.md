@@ -1,11 +1,12 @@
 # algebraic-geometry
 
-aspects/Formula
-aspects/Motion
-
 Camera
 
-`render(ctx, state, camera, entity)`
+`systems/render(ctx, state, camera, entity)`
+
+- handle translate of coordinate
+
+componets/Motion
 
 # vector
 
