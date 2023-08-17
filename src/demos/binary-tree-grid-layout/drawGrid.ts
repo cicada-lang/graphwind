@@ -1,3 +1,4 @@
+import colors from "tailwindcss/colors"
 import { State } from "./State.ts"
 
 export function drawGrid(ctx: CanvasRenderingContext2D, state: State): void {

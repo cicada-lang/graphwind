@@ -1,5 +1,5 @@
 import { State } from "./State.ts"
-import { createCamera } from "./createCamera.ts"
+import { createCamera } from "./camera/createCamera.ts"
 
 export function createState(canvas: HTMLCanvasElement): State {
   const camera = createCamera()

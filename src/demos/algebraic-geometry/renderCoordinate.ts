@@ -1,4 +1,3 @@
-import colors from "tailwindcss/colors"
 import { State } from "./State"
 import { Camera } from "./camera"
 
@@ -13,14 +12,12 @@ export function renderCoordinate(
   ctx.strokeStyle = "hsla(220, 0%, 50%, 50%)"
   ctx.lineWidth = 1
 
-  const delta = 0.01
-  for (let x = 0; x < 100; x += delta) {
-    const x0 = x
-    const x1 = x + delta
-
+  for (let x = 0; x < 100; x += 1) {
     ctx.beginPath()
-    ctx.moveTo(x0 * camera.unit, 0)
-    ctx.lineTo(x1 * camera.unit, 0)
+    ctx.moveTo(x * camera.unit, 0)
+    ctx.lineTo((x + 1) * camera.unit, 0)
+    ctx.moveTo(x * camera.unit, 0)
+    ctx.lineTo(x * camera.unit, 8)
     ctx.stroke()
   }
 
