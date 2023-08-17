@@ -10,6 +10,7 @@ export function main() {
 
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
   const state = createState(canvas)
+  state.camera.position = [3, 3]
 
   addExampleFormulas(state.formulas)
 

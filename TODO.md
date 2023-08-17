@@ -1,10 +1,8 @@
 # algebraic-geometry
 
-`renderCamera`
+`renderCoordinate` -- by `camera`
 
 `moveCamera`
-
-`renderCoordinate` -- by `camera`
 
 `renderFormula` -- by `camera`
 

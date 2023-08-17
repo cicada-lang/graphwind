@@ -13,8 +13,10 @@ export function renderFormula(
   ctx.scale(1, -1)
   ctx.lineWidth = 1
 
+  const left = 0
+  const right = 100
   const delta = 0.01
-  for (let x = 0; x < 100; x += delta) {
+  for (let x = left; x < right; x += delta) {
     const x0 = x
     const x1 = x + delta
     const y0 = formula.f(x0)
