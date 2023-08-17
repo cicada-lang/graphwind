@@ -1,7 +1,5 @@
 # algebraic-geometry
 
-Camera
-
 `systems/render(ctx, state, camera, entity)`
 
 - handle translate of coordinate
