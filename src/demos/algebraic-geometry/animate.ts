@@ -7,6 +7,7 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
 
   const camera: Camera = {
     position: [0, 0],
+    unit: 30,
     diagonal: 500,
   }
 

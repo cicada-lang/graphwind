@@ -1,8 +1,6 @@
 # algebraic-geometry
 
-`systems/renderFormula(ctx, state, camera, entity)`
-
-- handle translate of coordinate
+refactor renderFormula
 
 componets/Motion
 
