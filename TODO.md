@@ -1,6 +1,6 @@
 # algebraic-geometry
 
-state has ctx
+stateTrackMouse
 
 refactor renderFormula
 

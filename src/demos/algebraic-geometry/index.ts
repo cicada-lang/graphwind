@@ -3,18 +3,13 @@ import { createState } from "./createState.ts"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 
-  const state = createState(canvas, ctx, {
-    mouse: {
-      x: 0,
-      y: 0,
-      isDown: false,
-    },
-  })
+  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
+
+  const state = createState(canvas)
 
   state.formulas.set("1", {
     f: Math.sin,
