@@ -1,7 +1,5 @@
 # algebraic-geometry
 
-state has camera
-
 `renderCoordinate`
 
 refactor `renderFormula`
