@@ -1,6 +1,6 @@
 # algebraic-geometry
 
-`systems/render(ctx, state, camera, entity)`
+`systems/renderFormula(ctx, state, camera, entity)`
 
 - handle translate of coordinate
 

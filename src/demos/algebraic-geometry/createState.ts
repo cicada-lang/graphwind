@@ -20,5 +20,6 @@ export function createState(
 
     unit: 40,
     entities: new Map(),
+    formulas: new Map(),
   }
 }
