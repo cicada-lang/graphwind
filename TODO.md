@@ -2,8 +2,6 @@
 
 `moveCamera`
 
-`renderFormula` -- by `camera`
-
 `componets/Motion`
 
 # vector

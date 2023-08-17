@@ -11,13 +11,20 @@ export function renderFormula(
   ctx.save()
   ctx.translate(state.canvas.width / 2, state.canvas.height / 2)
   ctx.scale(1, -1)
+
+  ctx.translate(
+    -camera.position[0] * camera.unit,
+    -camera.position[1] * camera.unit,
+  )
+
   ctx.lineWidth = 1
 
-  const left = camera.position[0] - state.canvas.width / 2 / camera.unit
-  const right = camera.position[0] + state.canvas.width / 2 / camera.unit
+
+  const left = -state.canvas.width / 2 - camera.position[0] * camera.unit
+  const right = state.canvas.width / 2 + camera.position[0] * camera.unit
 
   const delta = 0.01
-  for (let x = left; x < right; x += delta) {
+  for (let x = left; x * camera.unit < right; x += delta) {
     const x0 = x
     const x1 = x + delta
     const y0 = formula.f(x0)
