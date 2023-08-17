@@ -1,6 +1,25 @@
+# algebraic-geometry
+
+aspects/Formula
+aspects/Motion
+
+Stage -- a list of entities
+
+Camera
+
+`render(ctx, state, camera, entity)`
+
+# vector
+
+vectorAdd
+vectorAddScaler
+vectorMulScaler
+
 # graph-force-directed-layout
 
-[graph-force-directed-layout] refactor
+[graph-force-directed-layout] refactor with vector
+
+[graph-force-directed-layout] the screen should fit the image
 
 [graph-force-directed-layout] add padding to canvas
 
