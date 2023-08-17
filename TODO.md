@@ -1,5 +1,7 @@
 # algebraic-geometry
 
+remove `unit` from `state`
+
 refactor renderFormula
 
 componets/Motion

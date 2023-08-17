@@ -3,8 +3,7 @@ import { Formula } from "./components/Formula.ts"
 import { Entity } from "./entity"
 
 export type State = {
-  width: number
-  height: number
+  canvas: HTMLCanvasElement
   mouse: Mouse
   unit: number
   entities: Map<string, Entity>

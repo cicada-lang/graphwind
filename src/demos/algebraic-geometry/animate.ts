@@ -3,7 +3,7 @@ import { Camera } from "./camera/Camera.ts"
 import { renderFormula } from "./systems/renderFormula.ts"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
-  ctx.clearRect(0, 0, state.width, state.height)
+  ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)
 
   const camera: Camera = {
     position: [0, 0],

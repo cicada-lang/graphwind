@@ -9,7 +9,7 @@ export function renderFormula(
   formula: Formula,
 ): void {
   ctx.save()
-  ctx.translate(state.width / 2, state.height / 2)
+  ctx.translate(state.canvas.width / 2, state.canvas.height / 2)
   ctx.scale(1, -1)
   ctx.lineWidth = 1
 

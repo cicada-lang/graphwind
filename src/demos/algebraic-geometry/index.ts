@@ -2,7 +2,7 @@ import { Mouse } from "./Mouse.ts"
 import { animate } from "./animate.ts"
 import { createState } from "./createState.ts"
 
-export function main(){
+export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 
@@ -15,10 +15,18 @@ export function main(){
     isDown: false,
   }
 
-  const state = createState(ctx, {
-    width: canvas.width,
-    height: canvas.height,
-    mouse,
+  const state = createState(canvas, ctx, { mouse })
+
+  state.formulas.set("1", {
+    f: Math.sin,
+  })
+
+  state.formulas.set("2", {
+    f: (x) => x ** 2,
+  })
+
+  state.formulas.set("3", {
+    f: (x) => x ** 2 + x ** 3,
   })
 
   animate(ctx, state)
@@ -39,10 +47,5 @@ export function main(){
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-  })
-
-  window.addEventListener("resize", () => {
-    state.width = window.innerWidth
-    state.height = window.innerHeight
   })
 }

@@ -1,41 +1,22 @@
 import { Mouse } from "./Mouse.ts"
 import { State } from "./State.ts"
-import { Formula } from "./components/Formula.ts"
 
 export function createState(
+  canvas: HTMLCanvasElement,
   ctx: CanvasRenderingContext2D,
   options: {
-    width: number
-    height: number
     mouse: Mouse
   },
 ): State {
-  ctx.strokeStyle = "black"
-  ctx.lineWidth = 2
+  const { mouse } = options
+  mouse.x = canvas.width / 2
+  mouse.y = canvas.height / 2
 
-  options.mouse.x = options.width / 2
-  options.mouse.y = options.height / 2
-
-  const entities = new Map()
-  const formulas: Map<string, Formula> = new Map()
-
-  formulas.set("1", {
-    f: Math.sin
-  })
-
-  formulas.set("2", {
-    f: (x) => x ** 2,
-  })
-
-
-  formulas.set("3", {
-    f: (x) => x ** 2 + x ** 3,
-  })
-  
   return {
-    ...options,
+    canvas,
+    mouse,
     unit: 40,
-    entities,
-    formulas,
+    entities: new Map(),
+    formulas: new Map(),
   }
 }
