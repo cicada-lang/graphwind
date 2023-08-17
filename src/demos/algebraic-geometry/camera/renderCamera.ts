@@ -9,7 +9,7 @@ export function renderCamera(
   ctx.save()
   ctx.translate(state.canvas.width / 2, state.canvas.height / 2)
   ctx.scale(1, -1)
-  ctx.strokeStyle = "hsla(220, 100%, 50%, 50%)"
+  ctx.strokeStyle = "hsla(20, 100%, 50%, 50%)"
   ctx.lineWidth = 1
 
   ctx.beginPath()

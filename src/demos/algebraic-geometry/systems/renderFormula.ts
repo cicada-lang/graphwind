@@ -13,8 +13,9 @@ export function renderFormula(
   ctx.scale(1, -1)
   ctx.lineWidth = 1
 
-  const left = 0
-  const right = 100
+  const left = camera.position[0] - state.canvas.width / 2 / camera.unit
+  const right = camera.position[0] + state.canvas.width / 2 / camera.unit
+
   const delta = 0.01
   for (let x = left; x < right; x += delta) {
     const x0 = x
