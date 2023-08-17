@@ -5,7 +5,6 @@ import { Entity } from "./entity"
 export type State = {
   canvas: HTMLCanvasElement
   mouse: Mouse
-  unit: number
   entities: Map<string, Entity>
   formulas: Map<string, Formula>
 }

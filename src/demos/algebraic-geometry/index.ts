@@ -1,4 +1,3 @@
-import { Mouse } from "./Mouse.ts"
 import { animate } from "./animate.ts"
 import { createState } from "./createState.ts"
 
@@ -9,13 +8,13 @@ export function main() {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 
-  const mouse: Mouse = {
-    x: 0,
-    y: 0,
-    isDown: false,
-  }
-
-  const state = createState(canvas, ctx, { mouse })
+  const state = createState(canvas, ctx, {
+    mouse: {
+      x: 0,
+      y: 0,
+      isDown: false,
+    },
+  })
 
   state.formulas.set("1", {
     f: Math.sin,
@@ -32,16 +31,16 @@ export function main() {
   animate(ctx, state)
 
   window.addEventListener("mousedown", (event) => {
-    mouse.isDown = true
+    state.mouse.isDown = true
   })
 
   window.addEventListener("mouseup", (event) => {
-    mouse.isDown = false
+    state.mouse.isDown = false
   })
 
   window.addEventListener("mousemove", (event) => {
-    mouse.x = event.x
-    mouse.y = event.y
+    state.mouse.x = event.x
+    state.mouse.y = event.y
   })
 
   window.addEventListener("resize", () => {

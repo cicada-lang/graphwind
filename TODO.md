@@ -1,6 +1,6 @@
 # algebraic-geometry
 
-remove `unit` from `state`
+state has ctx
 
 refactor renderFormula
 

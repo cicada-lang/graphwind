@@ -9,13 +9,13 @@ export function createState(
   },
 ): State {
   const { mouse } = options
+
   mouse.x = canvas.width / 2
   mouse.y = canvas.height / 2
 
   return {
     canvas,
     mouse,
-    unit: 40,
     entities: new Map(),
     formulas: new Map(),
   }
