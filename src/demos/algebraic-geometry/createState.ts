@@ -19,5 +19,6 @@ export function createState(
     ...options,
 
     unit: 40,
+    entities: new Map(),
   }
 }
