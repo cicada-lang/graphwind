@@ -1,5 +1,6 @@
 import { animate } from "./animate.ts"
 import { createState } from "./createState.ts"
+import { trackMouse } from "./trackMouse.ts"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -23,20 +24,8 @@ export function main() {
     f: (x) => x ** 2 + x ** 3,
   })
 
+  trackMouse(state.mouse)
   animate(ctx, state)
-
-  window.addEventListener("mousedown", (event) => {
-    state.mouse.isDown = true
-  })
-
-  window.addEventListener("mouseup", (event) => {
-    state.mouse.isDown = false
-  })
-
-  window.addEventListener("mousemove", (event) => {
-    state.mouse.x = event.x
-    state.mouse.y = event.y
-  })
 
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth

@@ -1,6 +1,6 @@
 # algebraic-geometry
 
-stateTrackMouse
+resizeCanvas
 
 refactor renderFormula
 
