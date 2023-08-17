@@ -1,8 +1,8 @@
 # algebraic-geometry
 
-`renderCoordinate`
+`renderCoordinate` -- by `camera`
 
-refactor `renderFormula`
+`renderFormula` -- by `camera`
 
 `componets/Motion`
 
