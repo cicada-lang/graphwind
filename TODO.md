@@ -3,8 +3,6 @@
 aspects/Formula
 aspects/Motion
 
-Stage -- a list of entities
-
 Camera
 
 `render(ctx, state, camera, entity)`
