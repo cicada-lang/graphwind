@@ -1,8 +1,12 @@
 # algebraic-geometry
 
-refactor renderFormula
+state has camera
 
-componets/Motion
+`renderCoordinate`
+
+refactor `renderFormula`
+
+`componets/Motion`
 
 # vector
 
