@@ -10,6 +10,10 @@ export function addExampleFormulas(formulas: Map<string, Formula>) {
   })
 
   formulas.set("3", {
-    f: (x) => x ** 2 + x ** 3,
+    f: (x) => x ** 1 + Math.sin(x),
   })
+
+  formulas.set("4", {
+    f: (x) => x* Math.sin(x),
+  })  
 }
