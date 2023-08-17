@@ -1,7 +1,5 @@
 # algebraic-geometry
 
-exampleFormulas
-
 refactor renderFormula
 
 componets/Motion
