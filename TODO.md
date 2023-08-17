@@ -1,6 +1,6 @@
 # algebraic-geometry
 
-resizeCanvas
+exampleFormulas
 
 refactor renderFormula
 
