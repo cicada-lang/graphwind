@@ -1,6 +1,6 @@
-import { State } from "../../State"
-import { Camera } from "../../camera"
-import { Formula } from "../../components/Formula"
+import { State } from "../State"
+import { Camera } from "../camera"
+import { Formula } from "../components/Formula"
 
 export function renderFormula(
   ctx: CanvasRenderingContext2D,
