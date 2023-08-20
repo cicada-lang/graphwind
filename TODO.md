@@ -1,8 +1,14 @@
 # analytic-geometry
 
-`renderFormula` -- show `name`
+`exampleFormulas` instead of `addExampleFormulas`
 
 `renderMotion`
+
+`renderFormula` -- show `name`
+
+`renderMotion` -- show `name`
+
+design a control UI
 
 # graph-force-directed-layout
 
