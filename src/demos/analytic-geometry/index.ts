@@ -12,7 +12,7 @@ export function main() {
   const state = createState(canvas)
 
   state.camera.position = [1, 1]
-  state.camera.unit = 30
+  state.camera.scale = 30
 
   addExampleFormulas(state.formulas)
 

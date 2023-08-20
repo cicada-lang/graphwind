@@ -1,5 +1,6 @@
 import { State } from "./State"
 import { Camera } from "./camera"
+import { adjustCamera } from "./camera/adjustCamera"
 
 export function renderCoordinate(
   ctx: CanvasRenderingContext2D,
@@ -7,36 +8,33 @@ export function renderCoordinate(
   camera: Camera,
 ): void {
   ctx.save()
-  ctx.translate(state.canvas.width / 2, state.canvas.height / 2)
-  ctx.scale(1, -1)
-  ctx.translate(
-    -camera.position[0] * camera.unit,
-    -camera.position[1] * camera.unit,
-  )
+
+  const [width, height] = adjustCamera(ctx, state.camera)
+
   ctx.strokeStyle = "hsla(240, 100%, 50%, 50%)"
-  ctx.lineWidth = 1
+  ctx.lineWidth = 1 / 30
 
-  const left = -state.canvas.width / 2 - camera.position[0] * camera.unit
-  const right = state.canvas.width / 2 + camera.position[0] * camera.unit
+  const left = -width / 2 - camera.position[0]
+  const right = width / 2 + camera.position[0]
 
-  for (let x = left; x * camera.unit < right; x += 1) {
+  for (let x = left; x < right; x += 1) {
     ctx.beginPath()
-    ctx.moveTo(x * camera.unit, 0)
-    ctx.lineTo((x + 1) * camera.unit, 0)
-    ctx.moveTo(x * camera.unit, 0)
-    ctx.lineTo(x * camera.unit, 8)
+    ctx.moveTo(x, 0)
+    ctx.lineTo(x + 1, 0)
+    ctx.moveTo(x, 0)
+    ctx.lineTo(x, 1 / 5)
     ctx.stroke()
   }
 
-  const bottom = -state.canvas.width / 2 - camera.position[1] * camera.unit
-  const up = state.canvas.width / 2 + camera.position[1] * camera.unit
+  const bottom = -height / 2 - camera.position[1]
+  const up = height / 2 + camera.position[1]
 
-  for (let y = bottom; y * camera.unit < up; y += 1) {
+  for (let y = bottom; y < up; y += 1) {
     ctx.beginPath()
-    ctx.moveTo(0, y * camera.unit)
-    ctx.lineTo(0, (y + 1) * camera.unit)
-    ctx.moveTo(0, y * camera.unit)
-    ctx.lineTo(8, y * camera.unit)
+    ctx.moveTo(0, y)
+    ctx.lineTo(0, y + 1)
+    ctx.moveTo(0, y)
+    ctx.lineTo(1 / 5, y)
     ctx.stroke()
   }
 
