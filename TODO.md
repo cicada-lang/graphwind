@@ -1,7 +1,5 @@
 # analytic-geometry
 
-`mouse/`
-
 `Formula` -- has `color` & `name`
 
 `renderFormula` -- show `name`
