@@ -1,4 +1,5 @@
 export type Motion = {
-  x: (t: number) => number,
+  x: (t: number) => number
   y: (t: number) => number
+  precision: number
 }

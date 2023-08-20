@@ -1,9 +1,11 @@
 # analytic-geometry
 
 `Formula` -- has `color` & `name`
-`Formula` -- has `accuracy` or `precision`?
 `Motion` -- has `color` & `name`
+
 `renderMotion`
+
+`Entity` should just be a string
 
 # vector
 

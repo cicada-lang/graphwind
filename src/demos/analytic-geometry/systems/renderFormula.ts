@@ -13,10 +13,9 @@ export function renderFormula(
 
   ctx.lineWidth = 1 / 20
 
-  const delta = 0.01
-  for (let x = -width / 2; x < width / 2 + 1; x += delta) {
+  for (let x = -width / 2; x < width / 2 + 1; x += formula.precision) {
     const x0 = x
-    const x1 = x + delta
+    const x1 = x + formula.precision
     const y0 = formula.f(x0)
     const y1 = formula.f(x1)
     ctx.beginPath()
