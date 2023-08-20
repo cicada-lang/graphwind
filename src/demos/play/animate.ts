@@ -6,7 +6,7 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.font = "60px sans-serif"
   ctx.fillText("Hello world", 0, 0)
 
-  let text = ctx.measureText("Hello world");
+  let text = ctx.measureText("Hello world")
   console.log(text.width)
 
   // requestAnimationFrame(() => animate(ctx, state))

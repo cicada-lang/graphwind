@@ -1,5 +1,4 @@
 import { State } from "../State"
-import { Camera } from "../camera/Camera"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Motion } from "./Motion"
 
