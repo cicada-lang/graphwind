@@ -4,7 +4,7 @@ export function vectorDistance(x: Vector, y: Vector): number {
   if (x.length !== y.length) {
     throw new Error(
       [
-        `[vectorAdd] Vector length mismatch.`,
+        `[vectorDistance] Vector length mismatch.`,
         ``,
         `  x.length: ${x.length}`,
         `  y.length: ${y.length}`,

@@ -1,8 +1,8 @@
 # analytic-geometry
 
-`vectorSub` & `vectorDiv`
-
 `renderText`
+
+`renderInfo` show mouse `x, y` values
 
 hover a curve to show `name` and current `x, y` values
 
