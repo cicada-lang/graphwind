@@ -1,7 +1,5 @@
 # analytic-geometry
 
-`renderFormula` & `renderMotion` take `state` instead of `camera`
-
 `renderFormula` -- record length to mouse
 `renderMotion` -- record length to mouse
 

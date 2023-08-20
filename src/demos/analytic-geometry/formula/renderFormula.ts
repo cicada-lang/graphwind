@@ -1,15 +1,15 @@
-import { Camera } from "../camera/Camera"
+import { State } from "../State"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Formula } from "./Formula"
 
 export function renderFormula(
   ctx: CanvasRenderingContext2D,
-  camera: Camera,
+  state: State,
   formula: Formula,
 ): void {
   ctx.save()
 
-  const [width] = adjustCamera(ctx, camera)
+  const [width] = adjustCamera(ctx, state.camera)
 
   ctx.strokeStyle = formula.color
   ctx.lineWidth = 1 / 20

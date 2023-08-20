@@ -1,15 +1,16 @@
+import { State } from "../State"
 import { Camera } from "../camera/Camera"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Motion } from "./Motion"
 
 export function renderMotion(
   ctx: CanvasRenderingContext2D,
-  camera: Camera,
+  state: State,
   motion: Motion,
 ): void {
   ctx.save()
 
-  adjustCamera(ctx, camera)
+  adjustCamera(ctx, state.camera)
 
   ctx.strokeStyle = motion.color
   ctx.lineWidth = 1 / 20
