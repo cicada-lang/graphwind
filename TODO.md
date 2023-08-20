@@ -1,6 +1,6 @@
 # analytic-geometry
 
-`exampleFormulas` instead of `addExampleFormulas`
+`exampleMotions`
 
 `renderMotion`
 
