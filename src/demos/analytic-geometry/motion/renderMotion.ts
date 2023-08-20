@@ -1,6 +1,8 @@
+import { vectorDistance } from "../../../utils/vector"
 import { State } from "../State"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Id } from "../id/Id"
+import { updateMouseDistance } from "../mouse-distance/updateMouseDistance"
 import { Motion } from "./Motion"
 
 export function renderMotion(
@@ -27,6 +29,11 @@ export function renderMotion(
     ctx.moveTo(x0, y0)
     ctx.lineTo(x1, y1)
     ctx.stroke()
+
+    updateMouseDistance(state, id, {
+      position: [x0, y0],
+      distance: vectorDistance(state.mouse.position, [x0, y0]),
+    })
   }
 
   ctx.restore()

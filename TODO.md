@@ -1,8 +1,5 @@
 # analytic-geometry
 
-`renderFormula` -- record length to mouse
-`renderMotion` -- record length to mouse
-
 hover to curve to show label
 
 design a control UI

@@ -17,6 +17,6 @@ export function main() {
 
   createExampleFormulas(state)
   createExampleMotions(state)
-  trackMouse(state.mouse)
+  trackMouse(state)
   animate(ctx, state)
 }
