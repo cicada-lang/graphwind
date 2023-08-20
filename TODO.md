@@ -1,8 +1,9 @@
 # analytic-geometry
 
-`moveCamera`
-
-`componets/Motion`
+`Formula` -- has `color` & `name`
+`Formula` -- has `accuracy` or `precision`?
+`Motion` -- has `color` & `name`
+`renderMotion`
 
 # vector
 
