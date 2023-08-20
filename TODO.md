@@ -1,5 +1,7 @@
 # analytic-geometry
 
+`mouse/`
+
 `Formula` -- has `color` & `name`
 
 `renderFormula` -- show `name`
@@ -7,8 +9,6 @@
 `Motion` -- has `color` & `name`
 
 `renderMotion`
-
-`Entity` should just be a string
 
 # vector
 
