@@ -14,6 +14,10 @@ export function transformPoint(
   // flip y axis
   point[1] = -point[1]
 
+  // scale
+  point[0] /= camera.scale
+  point[1] /= camera.scale
+
   // translate to camera position
   point[0] += camera.position[0]
   point[1] += camera.position[1]

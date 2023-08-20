@@ -15,7 +15,5 @@ export function trackMouse(state: State) {
       event.x,
       event.y,
     ])
-
-    console.log(state.mouse.position)
   })
 }

@@ -12,7 +12,7 @@ export function renderCoordinate(
   ctx.strokeStyle = "hsla(240, 100%, 50%, 50%)"
   ctx.lineWidth = 1 / 30
 
-  for (let x = -width / 2; x <= width / 2; x += 1) {
+  for (let x = Math.floor(-width / 2); x <= Math.ceil(width / 2); x += 1) {
     ctx.beginPath()
     ctx.moveTo(x, 0)
     ctx.lineTo(x + 1, 0)
@@ -21,7 +21,7 @@ export function renderCoordinate(
     ctx.stroke()
   }
 
-  for (let y = -height / 2; y <= height / 2; y += 1) {
+  for (let y = Math.floor(-height / 2); y <= Math.ceil(height / 2); y += 1) {
     ctx.beginPath()
     ctx.moveTo(0, y)
     ctx.lineTo(0, y + 1)
