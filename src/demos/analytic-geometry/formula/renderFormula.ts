@@ -11,6 +11,7 @@ export function renderFormula(
 
   const [width] = adjustCamera(ctx, camera)
 
+  ctx.strokeStyle = formula.color
   ctx.lineWidth = 1 / 20
 
   for (let x = -width / 2; x < width / 2 + 1; x += formula.precision) {
