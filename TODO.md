@@ -1,6 +1,10 @@
 # analytic-geometry
 
-hover to curve to show label
+fix mouse distance
+
+hover to curve to bold
+
+hover to curve to show `name` current `x, y` values
 
 design a control UI
 

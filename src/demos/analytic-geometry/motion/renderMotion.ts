@@ -2,7 +2,6 @@ import { vectorDistance } from "../../../utils/vector"
 import { State } from "../State"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Id } from "../id/Id"
-import { updateMouseDistance } from "../mouse-distance/updateMouseDistance"
 import { Motion } from "./Motion"
 
 export function renderMotion(
@@ -16,8 +15,11 @@ export function renderMotion(
   adjustCamera(ctx, state.camera)
 
   ctx.strokeStyle = motion.color
-  ctx.lineWidth = 1 / 20
+  ctx.lineWidth = id === state.hovered ? 1 / 8 : 1 / 20
 
+  let xmin = 0
+  let ymin = 0
+  let distance = Infinity
   for (let t = motion.range[0]; t < motion.range[1]; t += motion.precision) {
     const t0 = t
     const t1 = t + motion.precision
@@ -30,11 +32,18 @@ export function renderMotion(
     ctx.lineTo(x1, y1)
     ctx.stroke()
 
-    updateMouseDistance(state, id, {
-      position: [x0, y0],
-      distance: vectorDistance(state.mouse.position, [x0, y0]),
-    })
+    const newDistance = vectorDistance(state.mouse.position, [x0, y0])
+    if (newDistance < distance) {
+      xmin = x0
+      ymin = y0
+      distance = newDistance
+    }
   }
+
+  state.mouseDistances.set(id, {
+    position: [xmin, ymin],
+    distance,
+  })
 
   ctx.restore()
 }
