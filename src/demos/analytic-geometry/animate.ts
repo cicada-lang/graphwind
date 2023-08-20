@@ -18,5 +18,5 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
     renderMotion(ctx, state.camera, motion)
   }
 
-  // requestAnimationFrame(() => animate(ctx, state))
+  requestAnimationFrame(() => animate(ctx, state))
 }
