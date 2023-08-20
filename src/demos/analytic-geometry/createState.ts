@@ -10,6 +10,8 @@ export function createState(canvas: HTMLCanvasElement): State {
     canvas,
     camera,
     mouse,
+    idCounter: 0,
     formulas: new Map(),
+    motions: new Map(),
   }
 }

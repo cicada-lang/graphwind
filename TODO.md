@@ -1,7 +1,5 @@
 # analytic-geometry
 
-`createFormula`
-
 `createMotion`
 
 `exampleMotions`

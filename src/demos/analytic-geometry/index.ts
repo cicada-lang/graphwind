@@ -1,7 +1,6 @@
-import { mapAssign } from "../../utils/mapAssign"
 import { animate } from "./animate"
+import { createExampleFormulas } from "./createExampleFormulas"
 import { createState } from "./createState"
-import { exampleFormulas } from "./exampleFormulas"
 import { trackMouse } from "./mouse/trackMouse"
 import { resizeCanvas } from "./resizeCanvas"
 
@@ -15,7 +14,7 @@ export function main() {
   state.camera.position = [1, 1]
   state.camera.scale = 30
 
-  mapAssign(state.formulas, exampleFormulas())
+  createExampleFormulas(state)
   trackMouse(state.mouse)
   animate(ctx, state)
 }

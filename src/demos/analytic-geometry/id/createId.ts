@@ -1,5 +1,5 @@
-let idCounter = 0
+import { State } from "../State"
 
-export function createId(): string {
-  return String(idCounter++)
+export function createId(state: State): string {
+  return String(state.idCounter++)
 }
