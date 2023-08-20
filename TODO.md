@@ -1,12 +1,20 @@
 # analytic-geometry
 
+`createId`
+
+- state as a set of `entities`
+
+`createFormula`
+
+`createMotion`
+
 `exampleMotions`
 
 `renderMotion`
 
-`renderFormula` -- show `name`
+`Legend`
 
-`renderMotion` -- show `name`
+`renderLegend` -- an example use both formula and motion
 
 design a control UI
 

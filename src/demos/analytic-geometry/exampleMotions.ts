@@ -1,37 +1,37 @@
 import colors from "tailwindcss/colors"
 import { Id } from "./entity/Id"
-import { Formula } from "./formula/Formula"
+import { Motion } from "./formula/Motion"
 
-export function exampleFormulas(): Map<Id, Formula> {
-  const formulas: Map<Id, Formula> = new Map()
+export function exampleMotions(): Map<Id, Motion> {
+  const motions: Map<Id, Motion> = new Map()
 
-  formulas.set("1", {
+  motions.set("1", {
     name: "sin",
     f: (x) => Math.sin(x),
     precision: 0.01,
     color: colors.rose[400],
   })
 
-  formulas.set("2", {
+  motions.set("2", {
     name: "x ** 2",
     f: (x) => x ** 2,
     precision: 0.01,
     color: colors.rose[400],
   })
 
-  formulas.set("3", {
+  motions.set("3", {
     name: "x + sin(x)",
     f: (x) => x + Math.sin(x),
     precision: 0.01,
     color: colors.rose[400],
   })
 
-  formulas.set("4", {
+  motions.set("4", {
     name: "x * sin(x)",
     f: (x) => x * Math.sin(x),
     precision: 0.01,
     color: colors.rose[400],
   })
 
-  return formulas
+  return motions
 }
