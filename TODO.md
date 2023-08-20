@@ -1,10 +1,17 @@
 # analytic-geometry
 
-hover to curve to bold
+`vectorSub` & `vectorDiv`
 
-hover to curve to show `name` current `x, y` values
+`renderText`
 
-design a control UI
+hover a curve to show `name` and current `x, y` values
+
+highlight current point on line
+
+`renderButton`
+
+[control] be able to move camera
+[control] be able to scale camera
 
 # graph-force-directed-layout
 
