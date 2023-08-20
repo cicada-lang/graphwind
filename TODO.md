@@ -1,8 +1,9 @@
 # analytic-geometry
 
-`Legend`
+`renderFormula` -- record length to mouse
+`renderMotion` -- record length to mouse
 
-`renderLegend` -- an example use both formula and motion
+hover to curve to show label
 
 design a control UI
 
