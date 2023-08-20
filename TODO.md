@@ -1,8 +1,6 @@
 # analytic-geometry
 
-`createMotion`
-
-`exampleMotions`
+`createExampleMotions`
 
 `renderMotion`
 
