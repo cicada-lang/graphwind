@@ -9,7 +9,7 @@ const inputFiles = [
   "demo-super-magnet.html",
   "demo-binary-tree-grid-layout.html",
   "demo-graph-force-directed-layout.html",
-  "demo-algebraic-geometry.html",
+  "demo-analytic-geometry.html",
 ]
 
 function buildInput() {
