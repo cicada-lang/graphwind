@@ -1,5 +1,6 @@
 import { animate } from "./animate"
 import { createExampleFormulas } from "./createExampleFormulas"
+import { createExampleMotions } from "./createExampleMotions"
 import { createState } from "./createState"
 import { trackMouse } from "./mouse/trackMouse"
 import { resizeCanvas } from "./resizeCanvas"
@@ -15,6 +16,7 @@ export function main() {
   state.camera.scale = 30
 
   createExampleFormulas(state)
+  createExampleMotions(state)
   trackMouse(state.mouse)
   animate(ctx, state)
 }

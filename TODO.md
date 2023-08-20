@@ -1,9 +1,5 @@
 # analytic-geometry
 
-`createExampleMotions`
-
-`renderMotion`
-
 `Legend`
 
 `renderLegend` -- an example use both formula and motion

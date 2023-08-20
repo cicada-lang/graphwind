@@ -1,8 +1,14 @@
-import { Id } from "./id/Id"
-import { Motion } from "./motion/Motion"
+import colors from "tailwindcss/colors"
+import { State } from "./State"
+import { createMotion } from "./motion/createMotion"
 
-export function createExampleMotions(): Map<Id, Motion> {
-  const motions: Map<Id, Motion> = new Map()
-
-  return motions
+export function createExampleMotions(state: State): void {
+  createMotion(state, {
+    name: "circle",
+    x: (t) => Math.sin(t),
+    y: (t) => Math.cos(t),
+    range: [0, Math.PI * 2],
+    precision: 0.01,
+    color: colors.orange[400],
+  })
 }
