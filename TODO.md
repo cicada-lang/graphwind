@@ -1,7 +1,5 @@
 # analytic-geometry
 
-`utils/vector/`
-
 `moveCamera`
 
 `componets/Motion`

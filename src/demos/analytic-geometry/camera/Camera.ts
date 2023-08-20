@@ -1,4 +1,6 @@
+import { Vector } from "../../../utils/vector"
+
 export type Camera = {
-  position: [number, number]
+  position: Vector
   scale: number
 }
