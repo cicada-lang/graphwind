@@ -1,4 +1,4 @@
-import { Camera } from "../camera"
+import { Camera } from "../camera/Camera"
 import { adjustCamera } from "../camera/adjustCamera"
 import { Formula } from "./Formula"
 

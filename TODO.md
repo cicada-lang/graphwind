@@ -1,18 +1,13 @@
 # analytic-geometry
 
-`Formula` -- has `color` & `name`
+`Formula` -- has `color`
+`Formula` -- has `name`
 
 `renderFormula` -- show `name`
 
 `Motion` -- has `color` & `name`
 
 `renderMotion`
-
-# vector
-
-vectorAdd
-vectorAddScaler
-vectorMulScaler
 
 # graph-force-directed-layout
 

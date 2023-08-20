@@ -15,7 +15,6 @@ export function main() {
   state.camera.scale = 30
 
   addExampleFormulas(state.formulas)
-
   trackMouse(state.mouse)
   animate(ctx, state)
 }
