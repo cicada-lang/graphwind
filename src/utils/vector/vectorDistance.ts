@@ -14,7 +14,7 @@ export function vectorDistance(x: Vector, y: Vector): number {
 
   let distanceSquared = 0
   for (let i = 0; i < x.length; i++) {
-    distanceSquared += x[i] ** 2 + y[i] ** 2
+    distanceSquared += (x[i] - y[i]) ** 2
   }
 
   return Math.sqrt(distanceSquared)
