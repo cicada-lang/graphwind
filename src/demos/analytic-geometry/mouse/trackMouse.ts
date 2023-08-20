@@ -10,7 +10,6 @@ export function trackMouse(mouse: Mouse) {
   })
 
   window.addEventListener("mousemove", (event) => {
-    mouse.x = event.x
-    mouse.y = event.y
+    mouse.position = [event.x, event.y]
   })
 }

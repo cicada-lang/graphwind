@@ -1,10 +1,12 @@
 import { State } from "../State"
 import { adjustCamera } from "../camera/adjustCamera"
+import { Id } from "../id/Id"
 import { Motion } from "./Motion"
 
 export function renderMotion(
   ctx: CanvasRenderingContext2D,
   state: State,
+  id: Id,
   motion: Motion,
 ): void {
   ctx.save()

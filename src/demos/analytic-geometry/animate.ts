@@ -10,12 +10,12 @@ export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   renderCamera(ctx, state.camera)
   renderCoordinate(ctx, state)
 
-  for (const formula of state.formulas.values()) {
-    renderFormula(ctx, state, formula)
+  for (const [id, formula] of state.formulas) {
+    renderFormula(ctx, state, id, formula)
   }
 
-  for (const motion of state.motions.values()) {
-    renderMotion(ctx, state, motion)
+  for (const [id, motion] of state.motions) {
+    renderMotion(ctx, state, id, motion)
   }
 
   requestAnimationFrame(() => animate(ctx, state))

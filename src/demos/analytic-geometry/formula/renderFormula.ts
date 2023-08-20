@@ -1,10 +1,12 @@
 import { State } from "../State"
 import { adjustCamera } from "../camera/adjustCamera"
+import { Id } from "../id/Id"
 import { Formula } from "./Formula"
 
 export function renderFormula(
   ctx: CanvasRenderingContext2D,
   state: State,
+  id: Id,
   formula: Formula,
 ): void {
   ctx.save()
@@ -23,6 +25,8 @@ export function renderFormula(
     ctx.moveTo(x0, y0)
     ctx.lineTo(x1, y1)
     ctx.stroke()
+
+    // updateMouseDistance(state, id, { position: []})
   }
 
   ctx.restore()
