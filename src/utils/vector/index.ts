@@ -1,1 +1,6 @@
 export * from './Vector'
+export * from './vectorAdd'
+export * from './vectorAddScalar'
+export * from './vectorMul'
+export * from './vectorMulScalar'
+export * from './vectorDistance'

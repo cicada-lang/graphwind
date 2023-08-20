@@ -9,7 +9,6 @@ export function adjustCamera(
   ctx.scale(camera.scale, -camera.scale)
   ctx.translate(-camera.position[0], -camera.position[1])
 
-
   const width = ctx.canvas.width / camera.scale
   const height = ctx.canvas.height / camera.scale
 

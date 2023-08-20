@@ -13,5 +13,6 @@ export function createState(canvas: HTMLCanvasElement): State {
     idCounter: 0,
     formulas: new Map(),
     motions: new Map(),
+    mouseDistances: new Map(),
   }
 }
