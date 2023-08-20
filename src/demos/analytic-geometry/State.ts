@@ -1,5 +1,5 @@
 import { Camera } from "./camera/Camera"
-import { Id } from "./entity/Id"
+import { Id } from "./id/Id"
 import { Formula } from "./formula/Formula"
 import { Mouse } from "./mouse/Mouse"
 

@@ -1,9 +1,5 @@
 # analytic-geometry
 
-`createId`
-
-- state as a set of `entities`
-
 `createFormula`
 
 `createMotion`

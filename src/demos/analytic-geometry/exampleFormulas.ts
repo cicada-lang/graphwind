@@ -1,5 +1,5 @@
 import colors from "tailwindcss/colors"
-import { Id } from "./entity/Id"
+import { Id } from "./id/Id"
 import { Formula } from "./formula/Formula"
 
 export function exampleFormulas(): Map<Id, Formula> {
