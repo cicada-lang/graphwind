@@ -1,8 +1,8 @@
-import { Graph } from "../../graph/Graph.ts"
-import { GraphLayout } from "./GraphLayout.ts"
-import { State } from "./State.ts"
-import { drawGraph } from "./drawGraph.ts"
-import { evolveGraph } from "./evolveGraph.ts"
+import { Graph } from "../../graph/Graph"
+import { GraphLayout } from "./GraphLayout"
+import { State } from "./State"
+import { drawGraph } from "./drawGraph"
+import { evolveGraph } from "./evolveGraph"
 
 let step = 0
 

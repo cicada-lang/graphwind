@@ -1,4 +1,4 @@
-import { State } from "./State.ts"
+import { State } from "./State"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   if (state.mouse.isDown) {

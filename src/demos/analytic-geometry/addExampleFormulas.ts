@@ -1,4 +1,4 @@
-import { Formula } from "./components/Formula"
+import { Formula } from "./formula/Formula"
 
 export function addExampleFormulas(formulas: Map<string, Formula>) {
   formulas.set("1", {

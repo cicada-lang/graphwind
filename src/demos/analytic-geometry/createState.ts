@@ -1,5 +1,5 @@
-import { State } from "./State.ts"
-import { createCamera } from "./camera/createCamera.ts"
+import { State } from "./State"
+import { createCamera } from "./camera/createCamera"
 
 export function createState(canvas: HTMLCanvasElement): State {
   const camera = createCamera()
@@ -17,7 +17,6 @@ export function createState(canvas: HTMLCanvasElement): State {
     canvas,
     camera,
     mouse,
-    entities: new Map(),
     formulas: new Map(),
   }
 }

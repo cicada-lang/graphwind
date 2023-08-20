@@ -1,4 +1,4 @@
-import { Node } from "./Node.ts"
+import { Node } from "./Node"
 
 export type Edge = {
   first: Node

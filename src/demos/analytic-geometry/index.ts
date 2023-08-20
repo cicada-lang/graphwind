@@ -1,8 +1,8 @@
-import { addExampleFormulas } from "./addExampleFormulas.ts"
-import { animate } from "./animate.ts"
-import { createState } from "./createState.ts"
-import { resizeCanvas } from "./resizeCanvas.ts"
-import { trackMouse } from "./trackMouse.ts"
+import { addExampleFormulas } from "./addExampleFormulas"
+import { animate } from "./animate"
+import { createState } from "./createState"
+import { resizeCanvas } from "./resizeCanvas"
+import { trackMouse } from "./trackMouse"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement

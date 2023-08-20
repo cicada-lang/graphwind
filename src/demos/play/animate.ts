@@ -1,4 +1,4 @@
-import { State } from "./State.ts"
+import { State } from "./State"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.clearRect(0, 0, state.width, state.height)

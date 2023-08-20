@@ -1,6 +1,6 @@
-import { Graph, Node } from "./Graph.ts"
-import { createEmptyGraph } from "./createEmptyGraph.ts"
-import { graphConnect } from "./graphConnect.ts"
+import { Graph, Node } from "./Graph"
+import { createEmptyGraph } from "./createEmptyGraph"
+import { graphConnect } from "./graphConnect"
 
 export function graphFromAdjacencyList(
   adjacencyList: Record<Node, Array<Node>>,

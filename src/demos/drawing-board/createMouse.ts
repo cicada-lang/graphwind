@@ -1,5 +1,5 @@
-import { Mouse } from "./Mouse.ts"
-import { State } from "./State.ts"
+import { Mouse } from "./Mouse"
+import { State } from "./State"
 
 export function createState(
   ctx: CanvasRenderingContext2D,

@@ -1,5 +1,5 @@
 import { test } from "vitest"
-import { graphFromAdjacencyList } from "./graphFromAdjacencyList.ts"
+import { graphFromAdjacencyList } from "./graphFromAdjacencyList"
 
 const graph = graphFromAdjacencyList({
   a: ["b", "c"],

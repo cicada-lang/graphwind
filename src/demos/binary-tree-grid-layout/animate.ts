@@ -1,7 +1,7 @@
-import { createTree } from "../../tree/createTree.ts"
-import { State } from "./State.ts"
-import { drawGrid } from "./drawGrid.ts"
-import { drawTree } from "./drawTree.ts"
+import { createTree } from "../../tree/createTree"
+import { State } from "./State"
+import { drawGrid } from "./drawGrid"
+import { drawTree } from "./drawTree"
 
 export function animate(ctx: CanvasRenderingContext2D, state: State): void {
   ctx.clearRect(0, 0, state.width, state.height)

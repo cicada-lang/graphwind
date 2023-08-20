@@ -1,6 +1,6 @@
-import { animate } from "./animate.ts"
-import { createGradient } from "./createGradient.ts"
-import { createState } from "./createState.ts"
+import { animate } from "./animate"
+import { createGradient } from "./createGradient"
+import { createState } from "./createState"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement

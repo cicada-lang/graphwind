@@ -1,6 +1,6 @@
 import { Camera } from "../camera"
 import { adjustCamera } from "../camera/adjustCamera"
-import { Formula } from "../formula/Formula"
+import { Formula } from "./Formula"
 
 export function renderFormula(
   ctx: CanvasRenderingContext2D,

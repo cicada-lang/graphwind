@@ -1,6 +1,6 @@
-import { Node } from "../../tree/Node.ts"
-import { State } from "./State.ts"
-import { TraversalOrder, treeLayoutByOrder } from "./treeLayoutByOrder.ts"
+import { Node } from "../../tree/Node"
+import { State } from "./State"
+import { TraversalOrder, treeLayoutByOrder } from "./treeLayoutByOrder"
 
 export function drawTree(
   ctx: CanvasRenderingContext2D,

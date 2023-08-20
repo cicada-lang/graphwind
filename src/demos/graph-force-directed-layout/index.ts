@@ -1,8 +1,8 @@
-import { Mouse } from "./Mouse.ts"
-import { animate } from "./animate.ts"
-import { createState } from "./createState.ts"
-import { exampleGraph } from "./exampleGraph.ts"
-import { graphLayoutRandom } from "./graphLayoutRandom.ts"
+import { Mouse } from "./Mouse"
+import { animate } from "./animate"
+import { createState } from "./createState"
+import { exampleGraph } from "./exampleGraph"
+import { graphLayoutRandom } from "./graphLayoutRandom"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement

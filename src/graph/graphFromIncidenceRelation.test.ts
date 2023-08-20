@@ -1,5 +1,5 @@
 import { test } from "vitest"
-import { graphFromIncidenceRelation } from "./graphFromIncidenceRelation.ts"
+import { graphFromIncidenceRelation } from "./graphFromIncidenceRelation"
 
 const graph = graphFromIncidenceRelation([
   ["b", "c"],

@@ -1,6 +1,9 @@
 # analytic-geometry
 
 `Formula` -- has `color` & `name`
+
+`renderFormula` -- show `name`
+
 `Motion` -- has `color` & `name`
 
 `renderMotion`
