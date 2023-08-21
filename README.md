@@ -9,7 +9,7 @@ A library for drawing graphs on canvas.
 Install this library by the following command:
 
 ```
-npm install @xieyuheng/graphwind
+npm install graphwind
 ```
 
 ## Development
