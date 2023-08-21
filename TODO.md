@@ -1,8 +1,8 @@
 # analytic-geometry
 
-hover a curve to show `name` and current `x, y` values
+`renderHovered` -- hover a curve to show `name`
 
-highlight current point on line
+`renderMotion` -- show motion in time
 
 `renderButton`
 

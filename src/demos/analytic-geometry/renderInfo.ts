@@ -14,19 +14,19 @@ export function renderInfo(state: State): void {
   drawTextOverCamera(
     state,
     `x: ${numberOmitAfterFloatPoint(mouseX, 0.01)}`,
-    [-width / 2, height / 2],
+    [-width / 2 + 0.3, height / 2 - 0.2],
     {
       fontScale: 1.8,
-      padding: [0.3, 0.2],
+      textBaseline: "hanging",
     },
   )
   drawTextOverCamera(
     state,
     `y: ${numberOmitAfterFloatPoint(mouseY, 0.01)}`,
-    [-width / 2, height / 2 - 0.9],
+    [-width / 2 + 0.3, height / 2 - 0.9],
     {
       fontScale: 1.8,
-      padding: [0.3, 0],
+      textBaseline: "hanging",
     },
   )
 

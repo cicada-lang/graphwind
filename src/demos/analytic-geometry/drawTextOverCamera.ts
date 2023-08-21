@@ -9,8 +9,8 @@ export function drawTextOverCamera(
   text: string,
   position: Vector,
   options: {
-    fontScale: number
-    padding?: Vector
+    fontScale?: number
+    textBaseline?: CanvasTextBaseline
   },
 ): void {
   drawText(state, text, vectorAdd(position, state.camera.position), options)

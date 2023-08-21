@@ -1,4 +1,4 @@
-import { Vector, vectorAdd } from "../../utils/vector"
+import { Vector } from "../../utils/vector"
 import { State } from "./State"
 
 // Assume the `adjustCamera` is called.
@@ -8,11 +8,12 @@ export function drawText(
   text: string,
   position: Vector,
   options: {
-    fontScale: number
-    padding?: Vector
+    fontScale?: number
+    textBaseline?: CanvasTextBaseline
   },
 ): void {
-  const { fontScale, padding } = options
+  const fontScale = options.fontScale || 1
+
 
   state.ctx.save()
 
@@ -21,10 +22,8 @@ export function drawText(
     (-1 / state.camera.scale) * fontScale,
   )
 
-  state.ctx.textBaseline = "hanging"
-
-  if (padding) {
-    position = [position[0] + padding[0], position[1] - padding[1]]
+  if (options.textBaseline) {
+    state.ctx.textBaseline = options.textBaseline
   }
 
   state.ctx.fillText(

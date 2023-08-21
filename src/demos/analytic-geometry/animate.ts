@@ -4,6 +4,7 @@ import { renderFormula } from "./formula/renderFormula"
 import { renderMotion } from "./motion/renderMotion"
 import { updateHovered } from "./mouse-distance/updateHovered"
 import { renderCoordinate } from "./renderCoordinate"
+import { renderHovered } from "./renderHovered"
 import { renderInfo } from "./renderInfo"
 
 export function animate(state: State): void {
@@ -13,8 +14,6 @@ export function animate(state: State): void {
   renderCoordinate(state)
   renderInfo(state)
 
-  updateHovered(state)
-
   for (const [id, formula] of state.formulas) {
     renderFormula(state, id, formula)
   }
@@ -22,6 +21,9 @@ export function animate(state: State): void {
   for (const [id, motion] of state.motions) {
     renderMotion(state, id, motion)
   }
+
+  updateHovered(state)
+  renderHovered(state)
 
   requestAnimationFrame(() => animate(state))
 }

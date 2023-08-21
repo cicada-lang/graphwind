@@ -11,7 +11,7 @@ export type State = {
   camera: Camera
   mouse: Mouse
   idCounter: number
-  hovered?: Id
+  hovered?: MouseDistance
   formulas: Map<Id, Formula>
   motions: Map<Id, Motion>
   mouseDistances: Map<Id, MouseDistance>

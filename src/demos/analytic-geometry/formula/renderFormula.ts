@@ -10,7 +10,7 @@ export function renderFormula(state: State, id: Id, formula: Formula): void {
   const [width] = adjustCamera(state.ctx, state.camera)
 
   state.ctx.strokeStyle = formula.color
-  state.ctx.lineWidth = id === state.hovered ? 1 / 8 : 1 / 20
+  state.ctx.lineWidth = id === state.hovered?.id ? 1 / 10 : 1 / 20
 
   let xmin = 0
   let ymin = 0
@@ -34,6 +34,7 @@ export function renderFormula(state: State, id: Id, formula: Formula): void {
   }
 
   state.mouseDistances.set(id, {
+    id,
     position: [xmin, ymin],
     distance,
   })
