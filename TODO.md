@@ -1,8 +1,6 @@
 # analytic-geometry
 
-`renderText`
-
-`renderInfo` show mouse `x, y` values
+`State` has `ctx`
 
 hover a curve to show `name` and current `x, y` values
 
