@@ -1,7 +1,5 @@
 # analytic-geometry
 
-`renderInfo` `drawText` with padding
-
 hover a curve to show `name` and current `x, y` values
 
 highlight current point on line
