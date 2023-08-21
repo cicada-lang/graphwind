@@ -18,13 +18,6 @@ export function createExampleFormulas(state: State): void {
   })
 
   createFormula(state, {
-    name: "x + sin(x)",
-    f: (x) => x + Math.sin(x),
-    precision: 0.1,
-    color: colors.rose[400],
-  })
-
-  createFormula(state, {
     name: "x * sin(x)",
     f: (x) => x * Math.sin(x),
     precision: 0.1,
