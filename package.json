@@ -1,7 +1,7 @@
 {
   "name": "graphwind",
   "version": "0.0.1",
-  "repository": "github:cicada-lang/graphwind",
+  "repository": "github:xieyuheng/graphwind",
   "type": "module",
   "files": [
     "lib"
