@@ -1,13 +1,13 @@
 # analytic-geometry
 
-`renderHovered` -- hover a curve to show `name`
-
-`renderMotion` -- show motion in time
-
 `renderButton`
 
 [control] be able to move camera
 [control] be able to scale camera
+
+`renderMotion` -- show motion in time
+
+[control] be able to control the play of motion
 
 # graph-force-directed-layout
 
