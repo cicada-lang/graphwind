@@ -7,16 +7,13 @@ import { resizeCanvas } from "./resizeCanvas"
 
 export function main() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
-  resizeCanvas(canvas)
-
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
   const state = createState(canvas)
+  resizeCanvas(state.canvas)
 
   state.camera.position = [1, 1]
-  state.camera.scale = 30
 
   createExampleFormulas(state)
   createExampleMotions(state)
   trackMouse(state)
-  animate(ctx, state)
+  animate(state)
 }

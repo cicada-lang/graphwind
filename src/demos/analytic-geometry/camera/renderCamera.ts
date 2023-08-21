@@ -1,29 +1,26 @@
-import { Camera } from "./Camera"
+import { State } from "../State"
 import { adjustCamera } from "./adjustCamera"
 import { moveToCamera } from "./moveToCamera"
 
-export function renderCamera(
-  ctx: CanvasRenderingContext2D,
-  camera: Camera,
-): void {
-  ctx.save()
+export function renderCamera(state: State): void {
+  state.ctx.save()
 
-  adjustCamera(ctx, camera)
-  moveToCamera(ctx, camera)
+  adjustCamera(state.ctx, state.camera)
+  moveToCamera(state.ctx, state.camera)
 
-  ctx.strokeStyle = "hsla(20, 100%, 50%, 50%)"
-  ctx.lineWidth = 1 / 20
+  state.ctx.strokeStyle = "hsla(20, 100%, 50%, 50%)"
+  state.ctx.lineWidth = 1 / 20
 
-  ctx.beginPath()
-  ctx.moveTo(0, 0)
-  ctx.lineTo(0, 1)
-  ctx.moveTo(0, 0)
-  ctx.lineTo(1, 0)
-  ctx.moveTo(0, 0)
-  ctx.lineTo(0, -1)
-  ctx.moveTo(0, 0)
-  ctx.lineTo(-1, 0)
-  ctx.stroke()
+  state.ctx.beginPath()
+  state.ctx.moveTo(0, 0)
+  state.ctx.lineTo(0, 1)
+  state.ctx.moveTo(0, 0)
+  state.ctx.lineTo(1, 0)
+  state.ctx.moveTo(0, 0)
+  state.ctx.lineTo(0, -1)
+  state.ctx.moveTo(0, 0)
+  state.ctx.lineTo(-1, 0)
+  state.ctx.stroke()
 
-  ctx.restore()
+  state.ctx.restore()
 }

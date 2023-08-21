@@ -6,22 +6,22 @@ import { updateHovered } from "./mouse-distance/updateHovered"
 import { renderCoordinate } from "./renderCoordinate"
 import { renderInfo } from "./renderInfo"
 
-export function animate(ctx: CanvasRenderingContext2D, state: State): void {
-  ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)
+export function animate(state: State): void {
+  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)
 
-  renderCamera(ctx, state.camera)
-  renderCoordinate(ctx, state)
-  renderInfo(ctx, state)
+  renderCamera(state)
+  renderCoordinate(state)
+  renderInfo(state)
 
   updateHovered(state)
 
   for (const [id, formula] of state.formulas) {
-    renderFormula(ctx, state, id, formula)
+    renderFormula(state, id, formula)
   }
 
   for (const [id, motion] of state.motions) {
-    renderMotion(ctx, state, id, motion)
+    renderMotion(state, id, motion)
   }
 
-  requestAnimationFrame(() => animate(ctx, state))
+  requestAnimationFrame(() => animate(state))
 }

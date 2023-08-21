@@ -1,6 +1,6 @@
 # analytic-geometry
 
-`State` has `ctx`
+`renderInfo` `drawText` with padding
 
 hover a curve to show `name` and current `x, y` values
 

@@ -4,7 +4,6 @@ import { State } from "./State"
 // Assume the `adjustCamera` is called.
 
 export function drawText(
-  ctx: CanvasRenderingContext2D,
   state: State,
   text: string,
   position: Vector,
@@ -14,20 +13,20 @@ export function drawText(
 ): void {
   const { fontScale } = options
 
-  ctx.save()
+  state.ctx.save()
 
-  ctx.scale(
+  state.ctx.scale(
     (1 / state.camera.scale) * fontScale,
     (-1 / state.camera.scale) * fontScale,
   )
 
-  ctx.textBaseline = "hanging"
+  state.ctx.textBaseline = "hanging"
 
-  ctx.fillText(
+  state.ctx.fillText(
     text,
     (position[0] * state.camera.scale) / fontScale,
     (-position[1] * state.camera.scale) / fontScale,
   )
 
-  ctx.restore()
+  state.ctx.restore()
 }

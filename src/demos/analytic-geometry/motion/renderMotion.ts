@@ -4,18 +4,13 @@ import { adjustCamera } from "../camera/adjustCamera"
 import { Id } from "../id/Id"
 import { Motion } from "./Motion"
 
-export function renderMotion(
-  ctx: CanvasRenderingContext2D,
-  state: State,
-  id: Id,
-  motion: Motion,
-): void {
-  ctx.save()
+export function renderMotion(state: State, id: Id, motion: Motion): void {
+  state.ctx.save()
 
-  adjustCamera(ctx, state.camera)
+  adjustCamera(state.ctx, state.camera)
 
-  ctx.strokeStyle = motion.color
-  ctx.lineWidth = id === state.hovered ? 1 / 8 : 1 / 20
+  state.ctx.strokeStyle = motion.color
+  state.ctx.lineWidth = id === state.hovered ? 1 / 8 : 1 / 20
 
   let xmin = 0
   let ymin = 0
@@ -27,10 +22,10 @@ export function renderMotion(
     const x1 = motion.x(t1)
     const y0 = motion.y(t0)
     const y1 = motion.y(t1)
-    ctx.beginPath()
-    ctx.moveTo(x0, y0)
-    ctx.lineTo(x1, y1)
-    ctx.stroke()
+    state.ctx.beginPath()
+    state.ctx.moveTo(x0, y0)
+    state.ctx.lineTo(x1, y1)
+    state.ctx.stroke()
 
     const newDistance = vectorDistance(state.mouse.position, [x0, y0])
     if (newDistance < distance) {
@@ -45,5 +40,5 @@ export function renderMotion(
     distance,
   })
 
-  ctx.restore()
+  state.ctx.restore()
 }

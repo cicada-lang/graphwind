@@ -7,6 +7,7 @@ import { Mouse } from "./mouse/Mouse"
 
 export type State = {
   canvas: HTMLCanvasElement
+  ctx: CanvasRenderingContext2D
   camera: Camera
   mouse: Mouse
   idCounter: number
