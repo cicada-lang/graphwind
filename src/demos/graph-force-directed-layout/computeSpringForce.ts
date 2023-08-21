@@ -1,4 +1,4 @@
-export function springForce(
+export function computeSpringForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {

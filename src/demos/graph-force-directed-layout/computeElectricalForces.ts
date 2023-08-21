@@ -1,10 +1,9 @@
 import { Graph, Node } from "../../graph/Graph"
-import { graphNodeNeighborsOrFail } from "../../graph/graphNodeNeighborsOrFail"
 import { graphNodes } from "../../graph/graphNodes"
 import { GraphLayout } from "./GraphLayout"
-import { springForce } from "./springForce"
+import { computeElectricalForce } from "./computeElectricalForce"
 
-export function graphSpringForces(
+export function computeElectricalForces(
   graph: Graph,
   layout: GraphLayout,
 ): Map<Node, [number, number]> {
@@ -15,12 +14,12 @@ export function graphSpringForces(
     if (position === undefined) continue
 
     const force: [number, number] = [0, 0]
-    for (const neighbor of graphNodeNeighborsOrFail(graph, node)) {
-      if (neighbor !== node) {
-        const neighborPosition = layout.nodePositions.get(neighbor)
-        if (neighborPosition === undefined) continue
+    for (const other of graphNodes(graph)) {
+      if (other !== node) {
+        const otherPosition = layout.nodePositions.get(other)
+        if (otherPosition === undefined) continue
 
-        const [x, y] = springForce(position, neighborPosition)
+        const [x, y] = computeElectricalForce(position, otherPosition)
         force[0] += x
         force[1] += y
       }

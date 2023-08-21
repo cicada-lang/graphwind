@@ -1,4 +1,4 @@
-export function electronicForce(
+export function computeElectricalForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
