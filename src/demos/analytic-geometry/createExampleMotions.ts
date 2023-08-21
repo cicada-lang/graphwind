@@ -2,6 +2,8 @@ import colors from "tailwindcss/colors"
 import { State } from "./State"
 import { createMotion } from "./motion/createMotion"
 
+// https://en.wikipedia.org/wiki/Parametric_equation
+
 export function createExampleMotions(state: State): void {
   createMotion(state, {
     name: "Circle of radian 3.",
@@ -12,6 +14,7 @@ export function createExampleMotions(state: State): void {
     color: colors.orange[400],
   })
 
+  // https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
   createMotion(state, {
     name: "Butterfly curve.",
     x: (t) =>
