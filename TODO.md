@@ -1,3 +1,15 @@
+graphic design practice
+
+- dot matrix / 点阵
+
+  - 尝试画太极
+  - 点阵字体
+  - 点击时显示网格，注意网格要与当前颜色相反
+
+- play with touch
+
+  https://developer.mozilla.org/en-US/docs/Web/API/Touch
+
 # analytic-geometry
 
 `renderButton`
