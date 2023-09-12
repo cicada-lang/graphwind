@@ -1,0 +1,6 @@
+{
+  "cors": true,
+  "cacheControlPatterns": {
+    "assets/**": "max-age=31536000"
+  }
+}
