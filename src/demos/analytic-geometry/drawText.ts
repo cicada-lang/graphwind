@@ -14,7 +14,6 @@ export function drawText(
 ): void {
   const fontScale = options.fontScale || 1
 
-
   state.ctx.save()
 
   state.ctx.scale(

@@ -18,12 +18,14 @@ export function createExampleMotions(state: State): void {
   createMotion(state, {
     name: "Butterfly curve.",
     x: (t) =>
-      5 * Math.sin(t) *
+      5 *
+      Math.sin(t) *
       (Math.E ** Math.cos(t) -
         2 * Math.cos(4 * t) -
         Math.sin(Math.sin(Math.sin(Math.sin(Math.sin(t / 12)))))),
     y: (t) =>
-      5 * Math.cos(t) *
+      5 *
+      Math.cos(t) *
       (Math.E ** Math.cos(t) -
         2 * Math.cos(4 * t) -
         Math.sin(Math.sin(Math.sin(Math.sin(Math.sin(t / 12)))))),
